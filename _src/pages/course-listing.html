@@ -1,0 +1,199 @@
+﻿{% set PageTitle = "My Account Course List" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.html" %}
+
+{% block Content %}
+    <section id="courses-wrap" class="wrap">
+        <div class="container-fluid but-fixed">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        We will have a scheduled maintenance on our severs on <strong>12/25/2018</strong> starting <strong>12:00am</strong>, during this time you wont be able to access your course.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="welcome-blurb h3 mb-4">Welcome Student Name</h1>
+                </div>
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="course-box card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="h5 my-0">Texas Seller-Server Course</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="status-alert clearfix">
+                                <div class="course-status float-left">
+                                    <span class="status-title">Status:</span>
+                                    <br>
+                                    <span class="status-type">In Progress</span>
+                                </div>
+                                <div class="course-alerts float-right">
+                                    <span class="blocking-alert">
+                                        <i class="material-icons">notification_important</i>
+                                        <span class="alert-count">2</span>
+                                    </span>
+                                    <span class="non-blocking-alert">
+                                        <i class="material-icons">textsms</i>
+                                        <span class="alert-count">10</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="progress course-progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="order-details float-left">
+                                <span class="order-title">Order ID:</span>
+                                <br>
+                                <span class="order-id">30013429</span>
+                            </div>
+                            <a class="btn btn-primary float-right" href="#">Course Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="course-box card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="h5 my-0">Texas Online Food Handler Program</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="status-alert clearfix">
+                                <div class="course-status float-left">
+                                    <span class="status-title">Status:</span>
+                                    <br>
+                                    <span class="status-type">Not Started</span>
+                                </div>
+                                <div class="course-alerts float-right">
+                                    <span class="blocking-alert">
+                                        <i class="material-icons">notification_important</i>
+                                        <span class="alert-count">2</span>
+                                    </span>
+                                    <span class="non-blocking-alert">
+                                        <i class="material-icons">textsms</i>
+                                        <span class="alert-count">0</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="progress course-progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="order-details float-left">
+                                <span class="order-title">Order ID:</span>
+                                <br>
+                                <span class="order-id">30013429</span>
+                            </div>
+                            <a class="btn btn-primary float-right" href="#">Course Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="course-box card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="h5 my-0">Texas Online Driver Education</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="status-alert clearfix">
+                                <div class="course-status float-left">
+                                    <span class="status-title">Status:</span>
+                                    <br>
+                                    <span class="status-type">In Progress</span>
+                                </div>
+                                <div class="course-alerts float-right">
+                                    <span class="blocking-alert">
+                                        <i class="material-icons">notification_important</i>
+                                        <span class="alert-count">2</span>
+                                    </span>
+                                    <span class="non-blocking-alert">
+                                        <i class="material-icons">textsms</i>
+                                        <span class="alert-count">5</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="progress course-progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 15%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="order-details float-left">
+                                <span class="order-title">Order ID:</span>
+                                <br>
+                                <span class="order-id">30013429</span>
+                            </div>
+                            <a class="btn btn-primary float-right" href="#">Course Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="course-box card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="h5 my-0">Texas Online Driver Education</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="status-alert clearfix">
+                                <div class="course-status float-left">
+                                    <span class="status-title">Status:</span>
+                                    <br>
+                                    <span class="status-type">Completed</span>
+                                </div>
+                                <div class="course-alerts float-right">
+                                    <span class="blocking-alert">
+                                        <i class="material-icons">notification_important</i>
+                                        <span class="alert-count">0</span>
+                                    </span>
+                                    <span class="non-blocking-alert">
+                                        <i class="material-icons">textsms</i>
+                                        <span class="alert-count">0</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="progress course-progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="order-details float-left">
+                                <span class="order-title">Order ID:</span>
+                                <br>
+                                <span class="order-id">30013429</span>
+                            </div>
+                            <a class="btn btn-primary float-right" href="#">Course Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="botom-upsell-wrap" class="wrap">
+        <div class="container-fluid but-fixed">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="welcome-blurb h3 mb-4">Student Name, you might also be interested in these:</h1>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="upsell-box card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img class="upsell-thumb float-left" src="https://via.placeholder.com/160" alt="The Easiest Way to Become a Notary">
+                            <div class="upsell-description">
+                                <h3 class="h4 card-title">The Easiest Way to Become a Notary</h3>
+                                <p class="card-text">Your one-stop, affordable resource for everything you need to become a notary!</p>
+                                <a class="btn btn-outline-primary btn-sm float-right" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="upsell-box card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img class="upsell-thumb float-left" src="https://via.placeholder.com/160" alt="The Easiest Way to Become a Notary">
+                            <div class="upsell-description">
+                                <h3 class="h4 card-title">Online OSHA Training Courses</h3>
+                                <p class="card-text">Convenient and effective way of completing required and recommended OSHA training.</p>
+                                <a class="btn btn-outline-primary btn-sm float-right" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,167 @@
+/* --------------------------------------------------------------
+    Import CCS Dependencies
+-------------------------------------------------------------- */
+@import 'icons';
+@import 'nav';
+@import 'default';
+@import 'login';
+/* --------------------------------------------------------------
+    Start Project CSS
+-------------------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+    background-color: #f5f7fa;
+}
+body {
+    margin-bottom: 60px;
+    padding-top: 3.5rem;
+    font-family: 'Open Sans', 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
+    text-rendering: optimizeLegibility;
+    background-color: #f5f7fa;
+}
+#footer-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    background-color: #6d7785;
+}
+#footer-wrap .footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 0.8rem;
+}
+.wrap {
+    padding: 30px 0;
+}
+.container-fluid.but-fixed {
+    max-width: 1200px;
+}
+
+h1.welcome-blurb {
+}
+.course-box.card {
+    border: 0;
+
+    .card-header {
+        background-color: #e6e9ed;
+        border-bottom: 0;
+
+        h4 {
+            font-weight: 600;
+        }
+    }
+    .card-body {
+        padding-bottom: 1.5rem;
+    }
+    .status-alert {
+        margin-bottom: 10px;
+    }
+    .status-title {
+        opacity: .5;
+        font-size: .8rem;
+    }
+    .status-type {
+        font-weight: 600;
+    }
+    .course-alerts {
+        margin-right: 5px;
+    }
+    .blocking-alert, .non-blocking-alert {
+        display: inline-block;
+        margin: 10px;
+        margin-top: 15px;
+        color: #b8b8b8;
+        position: relative;
+
+        .material-icons {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .alert-count {
+            padding: 0 4px;
+            position: absolute;
+            font-size: 0.7em;
+            color: #fff;
+            border-radius: 2px;
+            top: -5px;
+            left: 80%;
+        }
+    }
+    .blocking-alert {
+
+        .alert-count {
+            background-color: #da4453;
+        }
+    }
+    .non-blocking-alert {
+
+        .material-icons {
+            font-size: 1.3em;
+        }
+        .alert-count {
+            background-color: #f6bb42;
+        }
+    }
+    .course-progress {
+        height: 5px;
+    }
+    .course-progress {
+        height: 8px;
+        margin-bottom: 30px;
+
+        .progress-bar {
+            background-color: #a3d39c !important;
+        }
+    }
+    .order-details {
+        font-size: .8em;
+        opacity: .5;
+    }
+}
+#botom-upsell-wrap {
+    background-color: #fafafa;
+    border-top: 1px solid #e3e3e3;
+
+    .upsell-box.card {
+        border: 0;
+
+        .upsell-thumb {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 20px;
+            width: 25%;
+            max-width: 120px;
+        }
+        .upsell-description {
+            overflow: hidden;
+        }
+        .card-text {
+            font-size: .95em;
+        }
+    }
+}
+
+/* ----------------------------------------------------------------------------
+    Page Media Queries
+----------------------------------------------------------------------------- */
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
