@@ -42,25 +42,6 @@ h5, .h5 { font-size: 1em; }
 /* ----------------------------------------------------------------------------
     Tables
 ----------------------------------------------------------------------------- */
-.table_wrap { margin: 20px 0; width: 100%; overflow-x: auto; }
-table { margin: 0 0 10px 0; width: 100%; background: #fff; border-collapse: collapse; border-spacing: 0; text-align: left; }
-table th { font-size: inherit; font-weight: bold; padding: 8px 15px; text-align: inherit; border-bottom: 1px solid #999; vertical-align: middle; }
-table td { border-top: 1px dotted #ccc; border-bottom: 1px dotted #ccc; padding: 6px 15px; text-align: inherit; vertical-align: middle; }
-table th + tr:first-child td { border-top: 0; }
-table tr:hover td, table tr:hover th { color: #333; }
-table.rounded { border-collapse: separate; border: 1px solid #ccc; border-radius: 4px; }
-table.rounded tr:first-child td { border-top: 0; }
-table.rounded tr td { border-bottom: 0; }
-table.backed { background: #EDEDED; border: 0;}
-table.backed th { background: #e4e4e4; border-bottom: 2px solid #fff; }
-table.backed th:first-child { border-radius: 4px 0 0 0; }
-table.backed th:last-child { border-radius: 0 4px 0 0; }
-table.backed td { border-top: 1px solid #fff; }
-table.backed th:first-child td { border-top: 0; }
-table.backed td { border-bottom: 0; }
-table.bordered {  border-collapse: collapse;}
-table.bordered th, table.bordered td { border: 1px dotted #ccc; }
-table.bordered th { border-bottom: 2px solid #ccc; }
 
 /* ----------------------------------------------------------------------------
     Dropdown List

@@ -7,7 +7,7 @@
 {% block Content %}
     <section id="courses-wrap" class="wrap">
         <div class="container-fluid but-fixed">
-            <div class="row">
+            <div class="alerts-wrap row">
                 <div class="col-12">
                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
                         We will have a scheduled maintenance on our severs on <strong>12/25/2018</strong> starting <strong>12:00am</strong>, during this time you wont be able to access your course.
@@ -17,6 +17,20 @@
             </div>
             <div class="row">
                 <div class="col-12">
+                    <div class="sort-btn btn-group float-right">
+                        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort Courses
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdown">
+                            <a class="dropdown-item active" href="#">Show All</a>
+                            <a class="dropdown-item" href="#">Active Courses</a>
+                            <a class="dropdown-item" href="#">Completed</a>
+                            <div class="dropdown-divider"></div>
+                            <div class="search-courses">
+                                <input type="search" class="form-control mb-2 mr-sm-2" placeholder="Search">
+                            </div>
+                        </div>
+                    </div>
                     <h1 class="welcome-blurb h3 mb-4">Welcome Student Name</h1>
                 </div>
                 <div class="col-lg-4 col-md-6 ">

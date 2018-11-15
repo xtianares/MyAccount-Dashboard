@@ -1,0 +1,158 @@
+﻿{% set PageTitle = "My Account Profile" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.html" %}
+
+{% block Content %}
+    <section id="my-account-wrap" class="wrap">
+        <div class="container-fluid but-fixed">
+            <div class="alerts-wrap row">
+                <div class="col-12">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        We will have a scheduled maintenance on our severs on <strong>12/25/2018</strong> starting <strong>12:00am</strong>, during this time you wont be able to access your course.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="welcome-blurb h3 mb-4">My Account</h1>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile-box card mb-4 shadow-sm">
+                        <div class="profile-image">
+                            <img src="https://www.fillmurray.com/120/120" class="d-inline-block align-middle" alt="Profile">
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="profile-name">Student Name</p>
+                            <p class="profile-email">test@test.com</p>
+                            <p class="profile-address">Houston, Texas</p>
+                            <a class="btn btn-outline-secondary btn-sm profile-edit" href="#">Edit Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <div class="card-edit float-right">
+                                <a class="card-edit float-right" href="#">Edit</a>
+                            </div>
+                            <h4 class="h5 my-0">Student Information</h4>
+                        </div>
+                        <div class="card-body table-responsive">
+                            <table class="table table-sm table-borderless mb-0">
+                                <tbody>
+                                    <tr>
+                                        <th class="info-title">Student Name:</th>
+                                        <td>Student Name</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="info-title">Gender:</th>
+                                        <td>Male</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="info-title">Date of Birth:</th>
+                                        <td>01/01/2018</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="info-title">Phone #:</th>
+                                        <td>(407) 111-1111</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="info-title">Address:</th>
+                                        <td>123 Somewhere, Suite # 321 Over There, Texas 24568</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="info-title">Shipping Address:</th>
+                                        <td>123 Somewhere, Suite # 321 Over There, Texas 24568</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <div class="card-edit float-right">
+                                <a href="#">Edit</a>
+                            </div>
+                            <h4 class="h5 my-0 float-left">Login Information</h4>
+                        </div>
+                        <div class="card-body table-responsive">
+                            <table class="table table-sm table-borderless mb-0">
+                                <tbody>
+                                    <tr>
+                                        <th class="info-title">Username:</th>
+                                        <td>test@test.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="info-title">Password:</th>
+                                        <td>&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <div class="card-edit float-right">Status</div>
+                            <h4 class="h5 my-0 float-left">Course List</h4>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="#">Texas Seller-Server Course</a>
+                                <div class="float-right">In Progress</div>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Texas Online Food Handler Program</a>
+                                <div class="float-right">Not Started</div>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Texas Online Driver Education</a>
+                                <div class="float-right">In Progress</div>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Texas Online Driver Education</a>
+                                <div class="float-right">Completed</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="botom-upsell-wrap" class="wrap">
+        <div class="container-fluid but-fixed">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="welcome-blurb h3 mb-4">Student Name, you might also be interested in these:</h1>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="upsell-box card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img class="upsell-thumb float-left" src="https://via.placeholder.com/160" alt="The Easiest Way to Become a Notary">
+                            <div class="upsell-description">
+                                <h3 class="h4 card-title">The Easiest Way to Become a Notary</h3>
+                                <p class="card-text">Your one-stop, affordable resource for everything you need to become a notary!</p>
+                                <a class="btn btn-outline-primary btn-sm float-right" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="upsell-box card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img class="upsell-thumb float-left" src="https://via.placeholder.com/160" alt="The Easiest Way to Become a Notary">
+                            <div class="upsell-description">
+                                <h3 class="h4 card-title">Online OSHA Training Courses</h3>
+                                <p class="card-text">Convenient and effective way of completing required and recommended OSHA training.</p>
+                                <a class="btn btn-outline-primary btn-sm float-right" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
