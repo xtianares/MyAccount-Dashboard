@@ -33,10 +33,9 @@ gulp.task('js', ['site:js', 'site:js-copy']);
 gulp.task('watch', function() {
     gulp.watch(paths.html.sitePages, ['html']);
     gulp.watch(paths.html.templatesFiles, ['html']);
-    gulp.watch(paths.images.files, ['images']);
+    gulp.watch(paths.images.siteFiles, ['images']);
     gulp.watch(paths.js.siteFiles, ['js']);
     gulp.watch(paths.css.siteFiles, ['css']);
-    gulp.watch(paths.css.regFiles, ['css']);
     gulp.watch(paths.root.files, ['rootfiles']);
 });
 
@@ -56,9 +55,9 @@ gulp.task('do-all', ['html', 'images', 'css', 'js', 'fonts', 'rootfiles', 'site:
 
 gulp.task('build', function(callback) {
     if (process.env.NODE_ENV == 'Staging' || process.env.NODE_ENV == 'Production') {
-        plugin.runSequence('site:clean', 'do-all', 'sitemap', 'generate-service-worker', callback);
+        plugin.runSequence('site:clean', 'do-all', 'generate-service-worker', callback);
     } else {
-        plugin.runSequence('site:clean', 'do-all', 'sitemap', callback);
+        plugin.runSequence('site:clean', 'do-all', callback);
     }
 });
 

@@ -54,7 +54,7 @@ gulp.task('site:js', function() {
     var jsbuild = gulp.src(paths.js.siteRootFiles)
         .pipe(plugin.sourcemaps.init())
         .pipe(plugin.deporder())
-        .pipe(plugin.concat('main.min.js'));
+        .pipe(plugin.concat('site.js'));
 
         config.set(jsbuild); // run replacement settings from config file
 
@@ -85,7 +85,7 @@ gulp.task('site:critical', ['css', 'site:nunjucks'], function () {
             .pipe(plugin.critical({
                 base: paths.site.dest,
                 inline: true,
-                css: [paths.css.siteDest+'style.css'],
+                css: [paths.css.siteDest+'site.css'],
                 minify: true,
                 include: ['#menutoggle', '.container.fluid'],
                 timeout: 90000,
@@ -103,36 +103,6 @@ gulp.task('site:critical', ['css', 'site:nunjucks'], function () {
             .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
         }
         return criticalpath.pipe(gulp.dest(paths.site.dest));
-});
-
-// generate sitemap.xml file
-gulp.task('sitemap', function () {
-    gulp.src([paths.site.dest + '**/*.html', '!_build/registration/**/*.html'], { read: false })
-        .pipe(plugin.sitemap({
-            siteUrl: config.site_url // this is set above in the variables
-        }))
-        .pipe(gulp.dest(paths.site.dest));
-});
-
-gulp.task('generate-service-worker', function(callback) {
-    plugin.swPrecache.write(paths.site.dest + "service-worker.js", {
-        //staticFileGlobs: [paths.site.dest + '/**/*.{js,html,aspx,css,png,jpg,webp,gif,svg,eot,ttf,woff}'],
-        staticFileGlobs: [
-            paths.site.dest + '/!(registration)/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}',
-            paths.site.dest + '/*.{js,html,css}'
-        ],
-        runtimeCaching: [{
-            urlPattern: /^http([s]*):\/\/(.*)\.googleapis\.com\/(.*)/,
-            handler: 'networkFirst',
-            options: {
-                cache: {
-                    maxEntries: 10,
-                    name: 'google-cache'
-                }
-            }
-        }],
-        stripPrefix: paths.site.dest
-    }, callback);
 });
 
 // clean the _build folder

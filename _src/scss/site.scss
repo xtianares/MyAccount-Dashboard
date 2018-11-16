@@ -37,7 +37,7 @@ body {
     padding: 30px 0;
 }
 .container-fluid.but-fixed {
-    max-width: 1200px;
+    max-width: 1230px;
 }
 .alerts-wrap {
     margin-bottom: .6rem;
@@ -170,9 +170,65 @@ th.info-title {
     width: 120px;
     height: 120px;
 }
+.help-icon {
+    margin: 1.8rem auto 0 auto;
+    width: 120px;
+    height: 120px;
 
+    img {
+        width: 100%;
+        max-width: auto;
+    }
+}
+.profile-details {
+    margin-bottom: 1.3rem;
+
+    .profile-name {
+        display: block;
+        font-size: 1.3em;
+        color: #0099ff;
+    }
+    .profile-email, .profile-address {
+        display: block;
+        opacity: .7;
+    }
+
+}
+.btn.profile-edit {
+    min-width: 150px;
+}
+.course-list {
+    .list-group-item a {
+        color: inherit;
+    }
+}
+.empty-box {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+a.contact_icon {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+
+    .material-icons {
+        display: inline-block;
+        border: 2px solid #ccc;
+        padding: 15px;
+        border-radius: 50%;
+        vertical-align: middle;
+        color: #ccc;
+        margin-right: 5px;
+    }
+    .material-icons + span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
 #botom-upsell-wrap {
-    background-color: #fafafa;
+    /*background-color: #fafafa;*/
     border-top: 1px solid #e3e3e3;
 
     .upsell-box.card {
@@ -199,12 +255,23 @@ th.info-title {
 ----------------------------------------------------------------------------- */
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-
+    .container-fluid.but-fixed {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .card-deck {
+        display: block;
+        margin-bottom: .75rem;
+        table-layout: fixed;
+    }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-
+    .card-deck {
+        display: -ms-flexbox;
+        display: flex;
+    }
 }
 
 // Large devices (desktops, 992px and up)

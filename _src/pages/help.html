@@ -1,0 +1,118 @@
+﻿{% set PageTitle = "My Account Help" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.html" %}
+
+{% block Content %}
+    <section id="my-account-wrap" class="wrap">
+        <div class="container-fluid but-fixed">
+            <div class="alerts-wrap row">
+                <div class="col-12">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        We will have a scheduled maintenance on our severs on <strong>12/25/2018</strong> starting <strong>12:00am</strong>, during this time you wont be able to access your course.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="welcome-blurb h3 mb-4">Completing Your Course</h1>
+                    <p>Please review the 3 simple notes below to quickly and easily complete your course.</p>
+                </div>
+                <div class="col-12">
+                    <div class="card-deck">
+                        <div class="help-box card mb-4 shadow-sm">
+                            <div class="help-icon">
+                                <img src="/CustomContent/images/icon-browser.png" class="d-inline-block align-middle" alt="Browsers">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h4 mb-3">Supporting Your Browsers</h3>
+                                <p>All devices, browsers and courses are different, but a few easy steps can improve your course experience.</p>
+                                <ol>
+                                    <li>Review <a href="/faqs/">Frequently Asked Questions</a></li>
+                                    <li>Log Off and Back On</li>
+                                    <li><a href="flash.pdf">Enable Flash</a></li>
+                                    <li>Enable Pop-Ups</li>
+                                    <li><a href="cookies.pdf">Clear Cache and Cookies</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="help-box card mb-4 shadow-sm">
+                            <div class="help-icon">
+                                <img src="/CustomContent/images/icon-certificate.png" class="d-inline-block align-middle" alt="Certificate">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h4 mb-3">Receiving Your Certificate</h3>
+                                <p>Please allow at least 7–10 business days to receive your certificate prior to contacting Customer Care. If you need to receive your certificate faster, please log into your course to review Expedite options.</p>
+                            </div>
+                        </div>
+                        <div class="help-box card mb-4 shadow-sm">
+                            <div class="help-icon">
+                                <img src="/CustomContent/images/icon-commitment.png" class="d-inline-block align-middle" alt="Commitment">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h4 mb-3">Our Commitment to You</h3>
+                                <p>We are committed to excellence and dedicated to your complete satisfaction. If you have any questions, <a href="contact-us.html">submit your question</a> or <a id="liveagent_button_online_5730a000000Cnhw" onclick="StartLiveChat();" href="javascript:void(0);">contact a Live Chat agent</a> for a quick response.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-deck">
+                        <div class="empty-box card mb-4 shadow-sm text-md-center">
+                            <a class="contact_icon" href="faqs.html"><i class="material-icons icon-round-box">info_outline</i> <span>Frequently Asked Questions</span></a>
+                        </div>
+                        <div class="empty-box card mb-4 shadow-sm text-md-center">
+                            <a class="contact_icon" id="liveagent_button_online_5730a000000Cnhw" onclick="StartLiveChat();" href="javascript:void(0);"><i class="material-icons icon-round-box">chat_bubble_outline</i> <span>Chat with an Agent</span></a>
+                        </div>
+                        <div class="empty-box card mb-4 shadow-sm text-md-center">
+                            <a class="contact_icon" href="contact-us.html"><i class="material-icons icon-round-box">mail_outline</i> <span>Send Us an Email</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="botom-upsell-wrap" class="wrap">
+        <div class="container-fluid but-fixed">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="welcome-blurb h3 mb-4">Student Name, you might also be interested in these:</h1>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="upsell-box card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img class="upsell-thumb float-left" src="https://via.placeholder.com/160" alt="The Easiest Way to Become a Notary">
+                            <div class="upsell-description">
+                                <h3 class="h4 card-title">The Easiest Way to Become a Notary</h3>
+                                <p class="card-text">Your one-stop, affordable resource for everything you need to become a notary!</p>
+                                <a class="btn btn-outline-primary btn-sm float-right" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="upsell-box card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img class="upsell-thumb float-left" src="https://via.placeholder.com/160" alt="The Easiest Way to Become a Notary">
+                            <div class="upsell-description">
+                                <h3 class="h4 card-title">Online OSHA Training Courses</h3>
+                                <p class="card-text">Convenient and effective way of completing required and recommended OSHA training.</p>
+                                <a class="btn btn-outline-primary btn-sm float-right" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+<!-- Start chat script -->
+<script type="text/javascript" id="asc_live_chat" src="https://course.uceusa.com/Courses/content/help/js/courselivechat.js"></script>
+<!-- End chat script -->
+{% endblock %}
