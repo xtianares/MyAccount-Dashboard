@@ -169,6 +169,12 @@ th.info-title {
     overflow: hidden;
     width: 120px;
     height: 120px;
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+    }
 }
 .help-icon {
     margin: 1.8rem auto 0 auto;
