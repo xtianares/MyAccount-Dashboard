@@ -1,0 +1,121 @@
+﻿{% set PageTitle = "My Account Checkout" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.html" %}
+
+{% block Content %}
+    <section id="my-account-wrap" class="wrap">
+        <div class="container-fluid but-fixed container-checkout">
+            <div class="row">
+                <aside class="col-sm-12 col-lg-4 order-lg-last">
+                    <div class="course-box card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="h5 my-0">Texas Seller-Server Course</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="status-alert clearfix">
+                                <div class="course-status float-left">
+                                    <span class="status-title">Status:</span>
+                                    <br>
+                                    <span class="status-type">In Progress</span>
+                                </div>
+                                <div class="course-alerts float-right">
+                                    <span class="blocking-alert">
+                                        <i class="material-icons">notification_important</i>
+                                        <span class="alert-count">2</span>
+                                    </span>
+                                    <span class="non-blocking-alert">
+                                        <i class="material-icons">textsms</i>
+                                        <span class="alert-count">10</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="progress course-progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="order-details float-left">
+                                <span class="order-title">Order ID:</span>
+                                <br>
+                                <span class="order-id">30013429</span>
+                            </div>
+                            <a class="btn btn-primary float-right" href="#">Course Dashboard</a>
+                        </div>
+                    </div>
+                </aside>
+                <div class="col-md-12 col-lg-8">
+                    <h1 class="h2 mb-3">Rush Processing</h1>
+                    <p class="mb-4">Same day processing and certificatee shipping before 6:00 PM EST (Business Day)</p>
+                    <form class="checkout-form" action="#" method="POST">
+                        <h3 class="section-title">Billing and Payment Info</h3>
+                        <div class="form-group row">
+                            <label for="name" class="col-md-3 col-form-label text-md-right">Name on Card</label>
+                            <div class="col-md-8">
+                                <input id="name" class="form-control" maxlength="80" name="name" size="20" type="text" data-hj-masked  />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="card_number" class="col-md-3 col-form-label text-md-right">Card Number</label>
+                            <div class="col-md-8">
+                                <input class="form-control" id="card_number" name="card_number" type="text" maxlength="16" pattern="^([0-9]{13,16})$" data-hj-masked onfocus="this.type='tel'" onblur="this.type='text'" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="type" class="col-md-3 col-form-label text-md-right">Subject</label>
+                            <div class="col-md-8">
+                                <select id="type" class="form-control custom-select">
+                                    <option value="General Question">General Question</option>
+                                    <option value="Registration">Registration</option>
+                                    <option value="Group/Bulk Order">Group/Bulk Order</option>
+                                    <option value="Problems Logging In">Problems Logging In</option>
+                                    <option value="Certificate/Shipping">Certificate/Shipping</option>
+                                    <option value="Technical or Course Issue">Technical or Course Issue</option>
+                                    <option value="Identity Validation/Security Questions">Identity Validation/Security Questions</option>
+                                    <option value="Change Account/Shipping Info">Change Account/Shipping Info</option>
+                                    <option value="Billing/PayPal">Billing/PayPal</option>
+                                    <option value="Refund/Cancellation">Refund/Cancellation</option>
+                                    <option value="Review">Review</option>
+                                    <option value="Complaint">Complaint</option>
+                                    <option value="Business Development/Affiliate Inquiry">Business Development/Affiliate Inquiry</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="description" class="col-md-3 col-form-label text-md-right">Question/Message</label>
+                            <div class="col-md-8">
+                                <textarea id="description" class="form-control" name="description" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <p class="optional">To help us serve you faster, please provide as much information as possible.</p>
+                        <div class="form-group row">
+                            <label for="phone" class="col-md-3 col-form-label text-md-right">Phone (Optional)</label>
+                            <div class="col-md-8">
+                                <input id="phone" class="form-control" maxlength="40" name="phone" size="20" type="tel" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="orderid" class="col-md-3 col-form-label text-md-right">Order ID (Optional)</label>
+                            <div class="col-md-8">
+                                <input  id="orderid" class="form-control" maxlength="40" name="00Nj000000BDAKV" size="20" type="text" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label text-md-right"></label>
+                            <div class="col-md-8">
+                                <button type="submit" class="btn btn-primary" style="min-width: 150px;">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+<!-- Start chat script -->
+<script type="text/javascript" id="asc_live_chat" src="https://course.uceusa.com/Courses/content/help/js/courselivechat.js"></script>
+<!-- End chat script -->
+{% endblock %}

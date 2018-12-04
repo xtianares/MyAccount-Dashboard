@@ -5,6 +5,7 @@
 @import 'nav';
 @import 'default';
 @import 'login';
+@import 'checkout';
 /* --------------------------------------------------------------
     Start Project CSS
 -------------------------------------------------------------- */
@@ -12,6 +13,7 @@ html {
     position: relative;
     min-height: 100%;
     background-color: #f5f7fa;
+    overflow-y: scroll;
 }
 body {
     margin-bottom: 60px;
@@ -256,6 +258,66 @@ a.contact_icon {
     }
 }
 
+/* ACCORDION */
+p+.accord {
+    margin-top: 20px;
+}
+.accord {
+    padding: 10px 10px 5px 10px;
+    border-bottom: 1px dotted #ccc;
+
+    &:first-child {
+        border-top: 1px dotted #ccc;
+    }
+    h3 {
+        margin-left: 0;
+        padding-right: 80px;
+        position: relative;
+        cursor: pointer;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+    h3:hover, h3:active, h3:focus {
+        color: #75a8e0;
+    }
+    h3:before {
+        color: #75a8e0;
+        content: "+";
+        display: none;
+        font-size: 18px;
+        font-weight: bold !important;
+        height: inherit;
+        margin-left: -20px;
+        vertical-align: middle;
+        width: 20px;
+        margin-top: -3px;
+    }
+    h3.active:before {
+        content: "-";
+    }
+    h3:after {
+        color: #75a8e0;
+        content: "+ More Info";
+        display: block;
+        font-size: 14px;
+        font-weight: normal!important;
+        font-family: 'Open Sans','Trebuchet MS',Verdana,Arial,Helvetica;
+        height: inherit;
+        vertical-align: middle;
+        position: absolute;
+        top: 6px;
+        right: 0;
+    }
+    h3.active:after {
+        content: "- Less Info";
+    }
+    .accord_content {
+        margin-top: 10px;
+        display: none;
+    }
+}
+
+
 /* ----------------------------------------------------------------------------
     Page Media Queries
 ----------------------------------------------------------------------------- */
@@ -265,7 +327,7 @@ a.contact_icon {
         padding-left: 30px;
         padding-right: 30px;
     }
-    .card-deck {
+    .card-deck.help-deck {
         display: block;
         margin-bottom: .75rem;
         table-layout: fixed;
@@ -274,15 +336,21 @@ a.contact_icon {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    .card-deck {
-        display: -ms-flexbox;
-        display: flex;
+    .accord h3 {
+        margin-left: 20px;
+
+        &:before {
+            display: inline-block;
+        }
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
+    .card-deck.help-deck {
+        display: -ms-flexbox;
+        display: flex;
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)

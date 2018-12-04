@@ -1,0 +1,148 @@
+﻿{% set PageTitle = "My Account FAQs" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.html" %}
+
+{% block Content %}
+    <section id="my-account-wrap" class="wrap">
+        <div class="container-fluid but-fixed">
+            <div class="alerts-wrap row">
+                <div class="col-12">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        We will have a scheduled maintenance on our severs on <strong>12/25/2018</strong> starting <strong>12:00am</strong>, during this time you wont be able to access your course.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="welcome-blurb h3 mb-4">General Course Questions</h1>
+                </div>
+                <div class="col-12">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <div class="accord">
+                                <h3 class="h4">How do I start this course?</h3>
+                                <div class="accord_content">
+                                    <p>When you first start this course, you will see a "Start The Course" button. Click the "Start The Course" button to begin the first lesson of the course.</p>
+                                    <img src="https://course.uceusa.com/Courses/content/help/images/startcourse.JPG" alt="StartCourseButtons" style="width:362;height:152;"> 			
+                                    <p>Once you have started the course, you will see a “Resume The Course” button upon subsequent login attempts. Anytime you log out and in to the course, you can click the “Resume The Course” button to return to the last page you viewed. You can also click the “View the Table Of Contents” button to return to previously viewed content.</p> 
+                                    <img src="https://course.uceusa.com/Courses/content/help/images/resumecourse.JPG" alt="ResumeCourseButtons" style="width:369;height:150;"> 
+                                </div>
+                            </div>
+                            <div class="accord">
+                                <h3 class="h4">Does this course have time requirements?</h3>
+                                <div class="accord_content">
+                                    <p>Many courses have regulatory time requirements. For most courses with time requirements, you will see a Timer in the top left of your screen when viewing a lesson. The Time Remaining must read 00:00:00 before you will be able to progress to the next lesson or complete the course. If you attempt to complete the course or go to the next lesson before the time requirement shows 00:00:00, you will receive a notice telling you that time requirements are not met.</p> 
+                                </div>
+                            </div>		
+                            <div class="accord">
+                                <h3 class="h4">Do I have to take the course in one sitting?</h3>
+                                <div class="accord_content">
+                                    <p>No, one of the many benefits of taking this course online is that once you have registered, you can log in and out of the course as many times as you wish, 24 hours a day, 7 days a week. This online format allows you to create the schedule you want.</p>
+                                </div>
+                            </div>	
+                            <div class="accord">
+                                <h3 class="h4">My course is not loading. What should I do first?</h3> 
+                                <div class="accord_content">
+                                    <p>First, try clearing your cache and cookies. <a href="https://course.uceusa.com/Courses/content/help/cookies.pdf">Click here</a> for simple instructions on how to clear your cache and cookies in different web browsers. Next, try enabling flash. <a href="https://course.uceusa.com/Courses/content/help/flash.pdf">Click here</a> for simple instructions on how to enable flash in different web browsers. Also try logging off the course, closing the web browser completely, relaunching your web browser and then logging back into the course.</p>
+                                </div>
+                            </div>	
+                            <div class="accord">
+                                <h3 class="h4">What should I do if I lose my username or password?</h3>
+                                <div class="accord_content">
+                                    <p>If you forget your password or have other difficulty logging into this course, contact a Live Chat agent to have your password or other account information reset for you.</p> 			
+                                </div>
+                            </div>	
+                            <div class="accord">
+                                <h3 class="h4">What are the Identity Validation requirements for this course?</h3> 
+                                <div class="accord_content">
+                                    <p>Many courses have regulatory requirements which require you to prove your identity at various points throughout a course.</p> 
+                                    <p>If your course has security questions, you will be prompted to answer the security questions before starting the course. It is recommend that you print or write down your responses to the security questions before continuing to make sure you remember your responses. Security questions will appear at random points throughout the course and must be answered correctly within a specific amount of time. Failing to correctly answer a certain number of security questions will result in your course being locked and possible course failure.</p> 
+                                    <p><img src="https://course.uceusa.com/Courses/content/help/images/SQ.JPG" alt="SecurityQuestion1" style="width:1117;height:45;"> 
+                                    <img src="https://course.uceusa.com/Courses/content/help/images/SQ2.JPG" alt="SecurityQuestion2" style="width:507;height:170;"></p>
+                                    <p>If your course has biometric security requirements, you will be prompted to complete the Voice or Keystroke Biometric sample before starting the course. For the best results in voice authentication, speak slowly and clearly, maintain a consistent rhythm, do not use a speakerphone, do not use Bluetooth or hands-free technology, and try to reduce background noise while validating. For the best results in keystroke authentication, use a desktop or laptop computer with a standard keyboard. Biometric samples will appear at random points throughout the course and must be completed correctly within a specific amount of time. Failing to correctly validate your identity a certain number of times will result in your course being locked and possible course failure.</p> 
+                                    <p><img src="https://course.uceusa.com/Courses/content/help/images/VB.jpg" alt="VoiceBio" style="width:608;height:311;"></p>
+                                    <p>If you have problems with security questions or biometric validation while taking your course, our customer service team is here to help 24/7. Contact a Live Chat agent for a quick response.</p> 			
+                                </div>
+                            </div>	
+                            <div class="accord">
+                                <h3 class="h4">What are the course requirements for quizzes and final exams?</h3> 
+                                <div class="accord_content">
+                                    <p>If your course has lesson quizzes, you must answer all of the quiz questions and then click the Submit button at the end of the page. Some courses have a minimum passing percentage requirement for quizzes. Review the Course Introduction lesson for more information about quiz requirements for your course.</p> 
+                                    <p>If your course has a final exam, you will be automatically redirected to the final exam after the last lesson. You will also be able to access the final exam by clicking on the “Begin The Exam” button on your My Account page. Review the Course Introduction lesson for more information about final exam requirements for your course.</p>
+                                    <p><img src="https://course.uceusa.com/Courses/content/help/images/final.JPG" alt="FinalButton" style="width:371;height:82;"></p>
+                                </div>
+                            </div>	
+                            <div class="accord">
+                                <h3 class="h4">What should I do if I have questions while taking this course?</h3> 
+                                <div class="accord_content">
+                                    <p>If you have any questions or issues while taking the course, our customer service team is here to help 24/7. Contact a Live Chat agent for a quick response.</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="botom-upsell-wrap" class="wrap">
+        <div class="container-fluid but-fixed">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="welcome-blurb h3 mb-4">Student Name, you might also be interested in these:</h1>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="upsell-box card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img class="upsell-thumb float-left" src="https://via.placeholder.com/160" alt="The Easiest Way to Become a Notary">
+                            <div class="upsell-description">
+                                <h3 class="h4 card-title">The Easiest Way to Become a Notary</h3>
+                                <p class="card-text">Your one-stop, affordable resource for everything you need to become a notary!</p>
+                                <a class="btn btn-outline-primary btn-sm float-right" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="upsell-box card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img class="upsell-thumb float-left" src="https://via.placeholder.com/160" alt="The Easiest Way to Become a Notary">
+                            <div class="upsell-description">
+                                <h3 class="h4 card-title">Online OSHA Training Courses</h3>
+                                <p class="card-text">Convenient and effective way of completing required and recommended OSHA training.</p>
+                                <a class="btn btn-outline-primary btn-sm float-right" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+<!-- Start chat script -->
+<script type="text/javascript" id="asc_live_chat" src="https://course.uceusa.com/Courses/content/help/js/courselivechat.js"></script>
+<!-- End chat script -->
+<script type="text/javascript">
+// accordion
+$(function() {
+    $('.accord h3').click(function(){
+        if( $(this).next('.accord_content').is(':hidden') ) {
+            $('.accord h3').removeClass('active');
+            $('.accord h3').next('.accord_content').slideUp(200);
+            $(this).toggleClass('active');
+            $(this).next('.accord_content').slideDown(200);
+        } else if( $(this).next('.accord_content').is(':visible') ) {
+            $(this).removeClass('active');
+            $(this).next('.accord_content').slideUp(200);
+        }
+        return false;
+    });
+});
+</script>
+{% endblock %}

@@ -21,14 +21,14 @@ module.exports = {
         regFiles: '_src/registration/images/**/*',
         siteFolder: '_src/images/',
         regFolder: '_src/registration/images/',
-        siteDest: '_build/CustomContent/images/',
+        siteDest: '_build/custom_content/images/',
         regDest: '_build/images/registration/'
     },
     css: {
         siteFiles: '_src/scss/**/*',
         siteFolder: '_src/scss/',
         siteSass: '_src/scss/site.scss',
-        siteDest: '_build/CustomContent/css/',
+        siteDest: '_build/custom_content/css/',
         regFiles: '_src/registration/scss/**/*',
         regFolder: '_src/registration/scss/',
         regDest: '_build/registration/css/'
@@ -40,7 +40,7 @@ module.exports = {
         regFiles: '_src/registration/js/**/*',
         regRootFiles: '_src/registration/js/*',
         regFolder: '_src/registration/js/',
-        siteDest: '_build/CustomContent/js/',
+        siteDest: '_build/custom_content/js/',
         regDest: '_build/js/registration/'
     },
     lang: {

@@ -78,7 +78,7 @@ gulp.task('site:js-copy', function() {
 
 // generate and inline critical css
 gulp.task('site:critical', ['css', 'site:nunjucks'], function () {
-    var criticalpath =  gulp.src([paths.site.dest+'**/*.html', '!'+paths.reg.dest+'**/*.html'])
+    var criticalpath =  gulp.src([paths.site.dest+'**/*.html', '!'+paths.site.dest+'index/index.html', '!'+paths.reg.dest+'**/*.html'])
         // minify production code
         if (process.env.NODE_ENV == 'Staging' || process.env.NODE_ENV == 'Production') {
             criticalpath = criticalpath

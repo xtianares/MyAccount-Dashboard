@@ -40,7 +40,7 @@ gulp.task('watch', function() {
 });
 
 // local webserver
-gulp.task('webserver', ['watch', 'html', 'site:critical'], function () {
+gulp.task('webserver', ['watch', 'site:critical'], function () {
     return gulp.src(paths.site.dest)
         .pipe(plugin.webserver({
             //https: true,
