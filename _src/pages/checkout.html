@@ -9,38 +9,32 @@
         <div class="container-fluid but-fixed container-checkout">
             <div class="row">
                 <aside class="col-sm-12 col-lg-4 order-lg-last">
-                    <div class="course-box card mb-4 shadow-sm">
+                    <div class="order-summary-box card mb-4 shadow-sm">
                         <div class="card-header">
-                            <h4 class="h5 my-0">Texas Seller-Server Course</h4>
+                            <h4 class="h5 my-0">Order Summary</h4>
                         </div>
-                        <div class="card-body">
-                            <div class="status-alert clearfix">
-                                <div class="course-status float-left">
-                                    <span class="status-title">Status:</span>
-                                    <br>
-                                    <span class="status-type">In Progress</span>
-                                </div>
-                                <div class="course-alerts float-right">
-                                    <span class="blocking-alert">
-                                        <i class="material-icons">notification_important</i>
-                                        <span class="alert-count">2</span>
-                                    </span>
-                                    <span class="non-blocking-alert">
-                                        <i class="material-icons">textsms</i>
-                                        <span class="alert-count">10</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="progress course-progress">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="order-details float-left">
-                                <span class="order-title">Order ID:</span>
-                                <br>
-                                <span class="order-id">30013429</span>
-                            </div>
-                            <a class="btn btn-primary float-right" href="#">Course Dashboard</a>
-                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <span class="item-name">Rush Processing</span>
+                                <span class="item-amount">$4.95</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="item-name">Example Product With Longer Name Than Others</span>
+                                <span class="item-amount">$5.00</span>
+                            </li>
+                            <li class="list-group-item subtotal">
+                                <span class="item-name">Subtotal:</span>
+                                <span class="item-amount">$9.95</span></li>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="item-name">Discounts</span>
+                                <span class="item-amount">- $0.00</span>
+                            </li>
+                            <li class="list-group-item total">
+                                <span class="item-name">Total:</span>
+                                <span class="item-amount">$9.95</span></li>
+                            </li>
+                        </ul>
                     </div>
                 </aside>
                 <div class="col-md-12 col-lg-8">
@@ -48,62 +42,68 @@
                     <p class="mb-4">Same day processing and certificatee shipping before 6:00 PM EST (Business Day)</p>
                     <form class="checkout-form" action="#" method="POST">
                         <h3 class="section-title">Billing and Payment Info</h3>
-                        <div class="form-group row">
+                        <div class="form-group form-row">
                             <label for="name" class="col-md-3 col-form-label text-md-right">Name on Card</label>
                             <div class="col-md-8">
                                 <input id="name" class="form-control" maxlength="80" name="name" size="20" type="text" data-hj-masked  />
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="form-group form-row">
                             <label for="card_number" class="col-md-3 col-form-label text-md-right">Card Number</label>
                             <div class="col-md-8">
                                 <input class="form-control" id="card_number" name="card_number" type="text" maxlength="16" pattern="^([0-9]{13,16})$" data-hj-masked onfocus="this.type='tel'" onblur="this.type='text'" />
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="type" class="col-md-3 col-form-label text-md-right">Subject</label>
+                        <div class="form-group form-row">
+                            <label class="col-md-3 col-form-label text-md-right">Expiration Date</label>
                             <div class="col-md-8">
-                                <select id="type" class="form-control custom-select">
-                                    <option value="General Question">General Question</option>
-                                    <option value="Registration">Registration</option>
-                                    <option value="Group/Bulk Order">Group/Bulk Order</option>
-                                    <option value="Problems Logging In">Problems Logging In</option>
-                                    <option value="Certificate/Shipping">Certificate/Shipping</option>
-                                    <option value="Technical or Course Issue">Technical or Course Issue</option>
-                                    <option value="Identity Validation/Security Questions">Identity Validation/Security Questions</option>
-                                    <option value="Change Account/Shipping Info">Change Account/Shipping Info</option>
-                                    <option value="Billing/PayPal">Billing/PayPal</option>
-                                    <option value="Refund/Cancellation">Refund/Cancellation</option>
-                                    <option value="Review">Review</option>
-                                    <option value="Complaint">Complaint</option>
-                                    <option value="Business Development/Affiliate Inquiry">Business Development/Affiliate Inquiry</option>
-                                    <option value="Other">Other</option>
-                                </select>
+                                <div class="form-row">
+                                    <div class="col-4 col-sm-3">
+                                        <select class="form-control custom-select" name="expiry_day">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 col-sm-3">
+                                        <select class="form-control custom-select" name="expiry_year">
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="description" class="col-md-3 col-form-label text-md-right">Question/Message</label>
+                        <div class="form-group form-row">
+                            <label for="orderid" class="col-md-3 col-form-label text-md-right">CVV</label>
                             <div class="col-md-8">
-                                <textarea id="description" class="form-control" name="description" rows="5"></textarea>
+                                <input  id="CVV" class="form-control" maxlength="40" name="CVV" size="20" type="text" />
                             </div>
                         </div>
-                        <p class="optional">To help us serve you faster, please provide as much information as possible.</p>
-                        <div class="form-group row">
-                            <label for="phone" class="col-md-3 col-form-label text-md-right">Phone (Optional)</label>
-                            <div class="col-md-8">
-                                <input id="phone" class="form-control" maxlength="40" name="phone" size="20" type="tel" />
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="orderid" class="col-md-3 col-form-label text-md-right">Order ID (Optional)</label>
-                            <div class="col-md-8">
-                                <input  id="orderid" class="form-control" maxlength="40" name="00Nj000000BDAKV" size="20" type="text" />
-                            </div>
-                        </div>
-                        <div class="form-group row">
+                        <div class="form-group form-row">
                             <label class="col-md-3 col-form-label text-md-right"></label>
-                            <div class="col-md-8">
-                                <button type="submit" class="btn btn-primary" style="min-width: 150px;">Send</button>
+                            <div class="col-md-8 text-right">
+                                <button type="submit" class="btn btn-success btn-lg" style="min-width: 150px;">Submit Payment</button>
                             </div>
                         </div>
                     </form>
