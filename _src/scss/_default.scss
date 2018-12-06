@@ -38,7 +38,11 @@ h5, .h5 { font-size: 1em; }
 /* ----------------------------------------------------------------------------
     Buttons
 ----------------------------------------------------------------------------- */
-
+.btn {
+    font-weight: 600;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
 /* ----------------------------------------------------------------------------
     Tables
 ----------------------------------------------------------------------------- */
@@ -60,3 +64,7 @@ h5, .h5 { font-size: 1em; }
 .dropdown_list .drop li a { float: none; display: block; margin: 0; padding: 6px 10px 6px 25px; height: auto; width: auto; text-transform: none; color: inherit; background: #fff; text-align: left; border-radius: 0; border: 0; }
 .dropdown_list .drop li a:hover, .dropdown_list .drop li a:active { background: #f1f1f1; -webkit-tap-highlight-color: rgba(0,0,0,0); }
 .dropdown_list .drop li a:before { display: inline-block; margin-left: -15px; margin-right: 5px; width: 10px; height: inherit; content: "\00BB"; color: inherit; font-family: 'icons'; text-align: center; font-size: inherit; vertical-align: top; }
+
+ul.check, ul.star, ul.carrot { margin-left: 22px; padding-left: 0; list-style: none outside; }
+ul.check li, ul.star li, ul.carrot li { margin-top: .5em; margin-bottom: .5em; }
+ul.check > li:before, ul.star > li:before, ul.carrot > li:before { display: inline-block; margin-top: 2px; margin-left: -22px; width: 22px; content: "done_outline"; height: inherit; color: inherit; font-family: 'Material Icons'; font-size: 14px; vertical-align: top; font-weight: normal !important; opacity: .75; word-wrap: normal;}

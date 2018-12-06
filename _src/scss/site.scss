@@ -6,6 +6,7 @@
 @import 'default';
 @import 'login';
 @import 'checkout';
+@import 'dashboard';
 /* --------------------------------------------------------------
     Start Project CSS
 -------------------------------------------------------------- */
@@ -16,7 +17,7 @@ html {
     overflow-y: scroll;
 }
 body {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
     padding-top: 3.5rem;
     font-family: 'Open Sans', 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
     text-rendering: optimizeLegibility;
@@ -29,6 +30,7 @@ body {
     width: 100%;
     color: #ffffff;
     background-color: #6d7785;
+    z-index: 11;
 }
 #footer-wrap .footer {
     padding-top: 15px;
@@ -154,6 +156,7 @@ body {
 
         .progress-bar {
             background-color: #a3d39c !important;
+            border-radius: .25rem;
         }
     }
     .order-details {
@@ -238,23 +241,22 @@ a.contact_icon {
 #botom-upsell-wrap {
     /*background-color: #fafafa;*/
     border-top: 1px solid #e3e3e3;
+}
+.upsell-box.card {
+    border: 0;
 
-    .upsell-box.card {
-        border: 0;
-
-        .upsell-thumb {
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-right: 20px;
-            width: 25%;
-            max-width: 120px;
-        }
-        .upsell-description {
-            overflow: hidden;
-        }
-        .card-text {
-            font-size: .95em;
-        }
+    .upsell-thumb {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 20px;
+        width: 25%;
+        max-width: 120px;
+    }
+    .upsell-description {
+        overflow: hidden;
+    }
+    .card-text {
+        font-size: .95em;
     }
 }
 

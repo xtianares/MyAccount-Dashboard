@@ -24,15 +24,18 @@ $(document).ready(function() {
 // to make sure that the body's bottom margin is equal the height of the sticky footer
 $(function() {
     var wWidth = $(window).width();
-    var headH = $("#header-wrapper").css("height")
-    var footH = $("#footer-wrap").css("height")
-    $("body").css( "margin-bottom", footH );
+    var headH = $("#header-wrapper .navbar").css("height");
+    var footH = $("#footer-wrap").css("height");
+    $("body").css( "padding-top", headH );
+    $("body").css( "padding-bottom", footH );
     $(window).resize(function() {
-        var headH = $("#header-wrapper").css("height")
+        var headH = $("#header-wrapper .navbar").css("height")
         var footH = $("#footer-wrap").css("height")
         if( wWidth != $(window).width() ) {
-            $("body").css( "margin-top", headH );
-            $("body").css( "margin-bottom", footH );
+            $("body").css( "padding-top", headH );
+            $("body").css( "padding-bottom", footH );
         }
     });
 });
+
+$('.accordion').collapse();
