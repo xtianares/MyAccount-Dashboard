@@ -4,6 +4,7 @@
 @import 'icons';
 @import 'nav';
 @import 'default';
+@import 'buttons';
 @import 'login';
 @import 'checkout';
 @import 'dashboard';
@@ -97,9 +98,9 @@ body {
             }
         }
     }
-    .card-body {
+    /*.card-body {
         padding-bottom: 1.5rem;
-    }
+    }*/
     .status-alert {
         margin-bottom: 10px;
     }

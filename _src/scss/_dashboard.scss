@@ -69,7 +69,7 @@
                 font-size: 1.4em;
                 font-weight: 600;
             }
-            h5[aria-expanded="true"]:after {
+            &[aria-expanded="true"] h5:after {
                 content: "-";
             }
             &:hover {
