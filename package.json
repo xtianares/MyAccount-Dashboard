@@ -15,7 +15,7 @@
     "amersc-registration-client": "1.1.2321-4.3",
     "autoprefixer": "^9.3.1",
     "critical": "^1.2.2",
-    "event-stream": "^4.0.1",
+    "event-stream": "^3.3.4",
     "fs-extra": "^7.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-chug": "^0.5.1",
