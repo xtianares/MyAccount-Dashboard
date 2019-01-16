@@ -8,6 +8,7 @@
 @import 'login';
 @import 'checkout';
 @import 'dashboard';
+@import 'player';
 /* --------------------------------------------------------------
     Start Project CSS
 -------------------------------------------------------------- */
@@ -262,6 +263,26 @@ a.contact_icon {
     .card-text {
         font-size: .95em;
     }
+}
+.modal-header {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    color: #fff;
+    background-color: #343A40;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+}
+.modal-body {
+    padding-top: 1.5rem;
+}
+.modal-footer {
+    border-top: 0;
+    .btn {
+        min-width: 100px;
+    }
+}
+.modal-backdrop {
+    opacity: 0.8 !important;
 }
 
 /* ----------------------------------------------------------------------------

@@ -1,0 +1,163 @@
+﻿{% set PageTitle = "My Account Checkout" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.html" %}
+
+{% block Content %}
+    <section id="dashboard-wrap" class="wrap d-flex">
+        <div class="dashboard-sidebar">
+            <div class="course-info card rounded-0">
+                <div class="card-body">
+                    <h4 class="h6 my-1">Texas Seller-Server Course</h4>
+                    <div class="order-details">
+                        <span class="order-title">Order ID:</span>
+                        <span class="order-id">30013429</span>
+                    </div>
+                    <div class="status-alert clearfix">
+                        <div class="course-status float-left">
+                            <span class="status-title">Status:</span>
+                            <br>
+                            <span class="status-type">In Progress</span>
+                        </div>
+                        <div class="course-alerts float-right">
+                            <span class="blocking-alert">
+                                <i class="material-icons">notification_important</i>
+                                <span class="alert-count">2</span>
+                            </span>
+                            <span class="non-blocking-alert">
+                                <i class="material-icons">textsms</i>
+                                <span class="alert-count">10</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="progress course-progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <a class="btn btn-success" href="/course-player/">Resume Course</a>
+                    <a class="btn btn-success disabled" href="#">Disabled Btn State</a>
+                    <a class="btn btn-success" href="/course-exam/">Take Exam</a>
+                </div>
+            </div>
+            <div class="table-content-box card mb-2 rounded-0">
+                <div class="card-header">
+                    <h4 class="h5 my-0 card-title">Table of Contents</h4>
+                </div>
+                <div class="accordion" id="toc-accordion">
+                    <div class="card">
+                        <div class="card-header" id="heading_1" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" aria-controls="collapse_1">
+                            <h5 class="h6 mb-0 card-title">
+                                Collapsible Chapter Title
+                            </h5>
+                        </div>
+                        <div id="collapse_1" class="collapse show" aria-labelledby="heading_1" data-parent="#toc-accordion">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item completed"><a href="/course-player/">Cras justo odio</a></li>
+                                <li class="list-group-item completed"><a href="/course-player/">Dapibus ac facilisis in</a></li>
+                                <li class="list-group-item completed"><a href="/course-player/">Morbi leo risus</a></li>
+                                <li class="list-group-item resume"><a href="/course-player/">Porta ac consectetur ac</a></li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading_2" data-toggle="collapse" data-target="#collapse_2" aria-expanded="false" aria-controls="collapse_2">
+                            <h5 class="h6 mb-0">
+                                Collapsible Chapter Title
+                            </h5>
+                        </div>
+                        <div id="collapse_2" class="collapse" aria-labelledby="heading_2" data-parent="#toc-accordion">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</a></li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</a></li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading_3" data-toggle="collapse" data-target="#collapse_3" aria-expanded="false" aria-controls="collapse_3">
+                            <h5 class="h6 mb-0">
+                                Collapsible Chapter Title
+                            </h5>
+                        </div>
+                        <div id="collapse_3" class="collapse" aria-labelledby="heading_3" data-parent="#toc-accordion">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</a></li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</a></li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading_4" data-toggle="collapse" data-target="#collapse_4" aria-expanded="false" aria-controls="collapse_4">
+                            <h5 class="h6 mb-0">
+                                Collapsible Chapter Title
+                            </h5>
+                        </div>
+                        <div id="collapse_4" class="collapse" aria-labelledby="heading_4" data-parent="#toc-accordion">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</a></li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</a></li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="purchased-upsell card mb-4 rounded-0">
+                <div class="card-body">
+                    <h4 class="h6 mb-3">Purchased Upgrades:</h4>
+                    <ul class="check">
+                        <li>PDF Study Guides</li>
+                        <li>Premier Pass</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-content wrap">
+            <div class="container-fluid but-fixed h-100">
+                <!-- start alerts, this node should be hidden if there's no alerts at all -->
+                <div class="alerts-wrap row">
+                    <div class="col-12">
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            This is where the offline message will show up. Dismissible alert message, remove the button to make it non-dismissible.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end alerts -->
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="welcome-blurb h2 mb-3">Texas Seller-Server Course</h1>
+                        <h5>Course Resources</h5>
+                        <p>The course resources provides additional documentation and content to act as supplements to the course.</p>
+                    </div>
+                </div>
+                <div class="row course-content">
+                    <div class="col-12">
+                        <h3>Resources</h3>
+                        <ol>
+                            <li>Resource Description: <a href="">Resource link</a></li>
+                            <li>Resource Description: <a href="">Resource link</a></li>
+                            <li>Resource Description: <a href="">Resource link</a></li>
+                            <li>Resource Description: <a href="">Resource link</a></li>
+                            <li>Resource Description: <a href="">Resource link</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+{% endblock %}

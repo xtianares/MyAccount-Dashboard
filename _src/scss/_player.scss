@@ -1,0 +1,110 @@
+/* ----------------------------------------------------------------------------
+    Cousrse player page style
+----------------------------------------------------------------------------- */
+.dashboard-content {
+    width: 100%;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    #botom-upsell-wrap {
+        margin-top: 20px;
+        padding-top: 25px;
+    }
+}
+.table-content-box.card {
+    overflow: hidden;
+    border-bottom: 1px dotted #ccc;
+    background-color: #fff;
+
+    .card-header {
+        background-color: #99A0A6;
+        border-radius: 0;
+    }
+
+}
+.course-content {
+    padding-top: 15px;
+    border-top: 1px dotted #ccc;
+}
+.course-controls-wrap {
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px dotted #ccc;
+
+    a {
+        color: inherit;
+    }
+    .material-icons {
+        display: inline-block;
+        font-size: 48px;
+        vertical-align: middle;
+        color: #777;
+    }
+    a:hover .material-icons {
+        color: #444;
+    }
+}
+.embed-responsive {
+    margin-bottom: 20px;
+}
+.questions {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #ccc;
+
+    .choices {
+        margin-top: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-wrap: wrap;
+        .btn {
+            margin: 10px;
+            min-width: 200px;
+            box-shadow: none;
+        }
+        .custom-radio {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+}
+.submit-exam {
+    min-width: 200px;
+}
+.scores {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.result p {
+    margin-bottom: .5rem;
+}
+
+/* ----------------------------------------------------------------------------
+    Page Media Queries
+----------------------------------------------------------------------------- */
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .course-content {
+        padding-top: 30px;
+    }
+    .course-controls-wrap {
+        padding-top: 15px;
+    }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

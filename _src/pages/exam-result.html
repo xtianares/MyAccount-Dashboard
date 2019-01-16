@@ -1,0 +1,68 @@
+﻿{% set PageTitle = "My Account Checkout" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.html" %}
+
+{% block Content %}
+    <section id="exam-wrap" class="wrap d-flex">
+        <div class="container-fluid but-fixed h-100">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="welcome-blurb h2 mb-3">Exam Score</h1>
+                    <p>Result copy goes here, either congratulations you passed or you did not meet the minimum passing score  and have failed the quize.</p>
+                </div>
+            </div>
+            <div class="row course-status justify-content-between">
+                <div class="col-12">
+                    <p>You answered <span class="text-danger scores">40%</span> correctly. Passing Score is: <span class="scores">70%</span></p>
+                    <p><a class="btn btn-outline-success btn-sm submit-exam" href="/course-exam/">Go Back and Review</a></p>
+                    <p>Incorrect answers are marked in <strong class="text-danger">red</strong>. Correct answers are marked in <strong class="text-success">green</strong>.</p>
+                </div>
+            </div>
+            <div class="row course-content">
+                <div class="col-12">
+                    <div class="questions">
+                        <h4 class="question">Above all else, safety is the most important element when working at a mine.</h4>
+                        <div class="choices result">
+                            <p class="text-success"><strong>True</strong></p>
+                            <p>False</p>
+                        </div>
+                    </div>
+                    <div class="questions">
+                        <h4 class="question">As described in Part 50, examples of medical treatment include:</h4>
+                        <div class="choices result">
+                            <p>Suturing a wound</p>
+                            <p>Amputation</p>
+                            <p class="text-danger"><strong>Treatment of second-degree burns</strong></p>
+                            <p class="text-success"><strong>All of the above are correct</strong></p>
+                        </div>
+                    </div>
+                    <div class="questions">
+                        <h4 class="question">The surgical removal of dead or damaged skin is an example of first-aid treatment.</h4>
+                        <div class="choices result">
+                            <p class="text-success"><strong>True</strong></p>
+                            <p>False</p>
+                        </div>
+                    </div>
+                    <div class="questions">
+                        <h4 class="question">Stretchers, blankets, and water are examples of sufficient ________.</h4>
+                        <div class="choices">
+                            <p class="text-danger"><strong>PPE</strong></p>
+                            <p>Neutralizing Agent</p>
+                            <p class="text-success"><strong>First-aid materials</strong></p>
+                            <p>MSDS</p>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-outline-success btn-sm submit-exam" href="/course-exam/">Go Back and Review</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+{% endblock %}

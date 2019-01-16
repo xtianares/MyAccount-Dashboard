@@ -1,15 +1,18 @@
 /* ----------------------------------------------------------------------------
     Dashboard Style
 ----------------------------------------------------------------------------- */
+#dashboard-wrap {
+    padding: 15px 0;
+}
 .dashboard-sidebar {
-    margin-top: -30px;
-    margin-bottom: -60px;
+    padding-top: 70px;
     width: 300px;
     height: 100%;
     background-color: #e6e9ed;
     position: fixed;
     overflow-y: auto;
     z-index: 10;
+    top: 0;
     left: -300px;
 
     .card {
@@ -20,6 +23,7 @@
         background-color: #ffffff;
     }
     .course-info {
+        padding-bottom: 10px;
         background-color: #eeeff1;
         border-bottom: 1px solid #ccc;
 
@@ -93,7 +97,7 @@
         .list-group-item {
             border-top-style: dotted;
             border-color: #ccc;
-            padding-left: 2.2rem;
+            padding-left: 1.8rem;
             z-index: 1;
             position: relative;
             a {
@@ -210,6 +214,10 @@
 ----------------------------------------------------------------------------- */
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+    #dashboard-wrap {
+        padding: 30px 0;
+    }
+
 }
 
 // Medium devices (tablets, 768px and up)
