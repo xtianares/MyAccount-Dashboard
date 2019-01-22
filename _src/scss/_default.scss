@@ -65,4 +65,4 @@ h5, .h5 { font-size: 1em; }
 
 ul.check, ul.star, ul.carrot { margin-left: 22px; padding-left: 0; list-style: none outside; }
 ul.check li, ul.star li, ul.carrot li { margin-top: .5em; margin-bottom: .5em; }
-ul.check > li:before, ul.star > li:before, ul.carrot > li:before { display: inline-block; margin-top: 2px; margin-left: -22px; width: 22px; content: "done_outline"; height: inherit; color: inherit; font-family: 'Material Icons'; font-size: 14px; vertical-align: top; font-weight: normal !important; opacity: .75; word-wrap: normal;}
+ul.check > li:before, ul.star > li:before, ul.carrot > li:before { display: inline-block; margin-top: 2px; margin-left: -22px; width: 22px; content: "\e876"; height: inherit; color: inherit; font-family: 'Material Icons'; font-size: 14px; vertical-align: top; font-weight: normal !important; opacity: .75; word-wrap: normal;}

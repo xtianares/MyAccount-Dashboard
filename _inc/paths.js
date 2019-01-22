@@ -29,9 +29,10 @@ module.exports = {
         siteFolder: '_src/scss/',
         siteSass: '_src/scss/site.scss',
         siteDest: '_build/custom_content/css/',
-        regFiles: '_src/registration/scss/**/*',
-        regFolder: '_src/registration/scss/',
-        regDest: '_build/registration/css/'
+        bsFiles: '_src/bootstrap/scss/**/*',
+        bsFolder: '_src/bootstrap/scss/',
+        bsSass: '_src/bootstrap/scss/bootstrap.scss',
+        bsDest: '_build/custom_content/css/bootstrap'
     },
     js: {
         siteFiles: '_src/js/**/*',

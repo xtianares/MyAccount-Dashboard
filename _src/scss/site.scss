@@ -18,9 +18,12 @@ html {
     background-color: #f5f7fa;
     overflow-y: scroll;
 }
+html.show-sidebar {
+    overflow-y: hidden;
+}
 body {
     padding-bottom: 60px;
-    padding-top: 3.5rem;
+    padding-top: 50px;
     font-family: 'Open Sans', 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
     text-rendering: optimizeLegibility;
     color: #555555;

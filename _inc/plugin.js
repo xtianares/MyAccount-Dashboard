@@ -19,11 +19,11 @@ module.exports =  {
     sitemap         : require('gulp-sitemap'),
     chug            : require('gulp-chug'),
     data            : require('gulp-data'),
+    postcss         : require('gulp-postcss'),
     fs              : require('fs-extra'),
     critical        : require('critical').stream,
     runSequence     : require('run-sequence'),
     swPrecache      : require('sw-precache'),
     amerscAPI       : require('amersc-registration-client'),
     eventstream     : require('event-stream')
-
 }

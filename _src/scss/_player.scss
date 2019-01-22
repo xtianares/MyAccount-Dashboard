@@ -1,6 +1,18 @@
 /* ----------------------------------------------------------------------------
     Cousrse player page style
 ----------------------------------------------------------------------------- */
+.fullscreen-active {
+    background-color: #fff;
+}
+.exit-fullscreen {
+    display: none;
+}
+.fullscreen-active .exit-fullscreen {
+    display: inline-block;
+}
+.fullscreen-active .go-fullscreen {
+    display: none;
+}
 .dashboard-content {
     width: 100%;
     padding-top: 0 !important;
@@ -22,9 +34,19 @@
     }
 
 }
+.dashboard-content .course-status {
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #ccc;
+
+    .material-icons {
+        vertical-align: middle;
+    }
+    .time-remaning-display {
+        vertical-align: middle;
+    }
+}
 .course-content {
     padding-top: 15px;
-    border-top: 1px dotted #ccc;
 }
 .course-controls-wrap {
     margin-top: 5px;
@@ -85,9 +107,6 @@
 ----------------------------------------------------------------------------- */
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    .course-content {
-        padding-top: 30px;
-    }
     .course-controls-wrap {
         padding-top: 15px;
     }

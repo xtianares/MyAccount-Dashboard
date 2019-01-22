@@ -51,7 +51,7 @@ gulp.task('webserver', ['watch', 'site:critical'], function () {
 });
 
 // run folder tasks
-gulp.task('do-all', ['html', 'images', 'css', 'js', 'fonts', 'rootfiles', 'site:critical']);
+gulp.task('do-all', ['html', 'images', 'css', 'bootstrap_css', 'js', 'fonts', 'rootfiles', 'site:critical']);
 
 gulp.task('build', function(callback) {
     if (process.env.NODE_ENV == 'Staging' || process.env.NODE_ENV == 'Production') {

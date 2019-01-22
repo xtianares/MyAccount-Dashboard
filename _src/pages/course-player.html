@@ -2,7 +2,7 @@
 {% set PageDescription = "Univeristy Platform Dashboard" %}
 {% set CanonicalPage = "" %}
 
-{% extends "MainTemplate.html" %}
+{% extends "CourseTemplate.html" %}
 
 {% block Content %}
     <section id="dashboard-wrap" class="wrap d-flex">
@@ -112,6 +112,11 @@
                     </div>
                 </div>
             </div>
+            <div class="card rounded-0">
+                <div class="card-body">
+                    <p class="mb-0">The American Safety Council's 100% online TABC certification training is approved by the Texas Alcoholic Beverage Commission (Seller Training School #614-692). Upon successful completion of this course, you will be able to immediately download an electronic copy of your seller training certification. The American Safety Council will also report your course completion to the Texas Alcoholic Beverage Commission within 14 calendar days.</p>
+                </div>
+            </div>
             <div class="purchased-upsell card mb-4 rounded-0">
                 <div class="card-body">
                     <h4 class="h6 mb-3">Purchased Upgrades:</h4>
@@ -128,23 +133,22 @@
                 <div class="alerts-wrap row">
                     <div class="col-12">
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            This is where the offline message will show up. Dismissible alert message, remove the button to make it non-dismissible.
+                            This is where the offline message will show up. Dismissible alert message, remove the 'x' button to make it non-dismissible.
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>
                     </div>
                 </div>
                 <!-- end alerts -->
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="welcome-blurb h2 mb-3">Texas Seller-Server Course</h1>
-                    </div>
-                </div>
                 <div class="row course-status justify-content-between">
                     <div class="col-6 time-elapse text-primary">
-                        <p>Elapsed Time: <span class="time-elapse-display">01:30:00</p>
+                        <p class="mb-0"><i class="material-icons">alarm</i>&nbsp;&nbsp;<span class="time-remaning-display">01:30:00</p>
                     </div>
-                    <div class="col-6 time-remaining text-primary text-right">
-                        <p>Remaining Time: <span class="time-remaning-display">04:30:00</p>
+                    <!-- <div class="col-6 time-remaining text-primary text-right">
+                        <p class="mb-0">Remaining Time: <span class="time-remaning-display">04:30:00</p>
+                    </div> -->
+                    <div class="col-6 go-fullscreen-box text-primary text-right">
+                        <button type="button" class="btn btn-outline-primary btn-sm go-fullscreen"><i class="material-icons">fullscreen</i> Fullscreen</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm exit-fullscreen"><i class="material-icons">fullscreen_exit</i> Exit Fullscreen</button>
                     </div>
                 </div>
                 <div class="row course-content">
@@ -154,7 +158,7 @@
                         </div>
                         <p class="text-danger"><em>Note: both video and slide views are going to share the same styles. For a stand-alone video page the slide controls should/can be displayed if necessary to move to the next slide/page. Videos can also have more content at the bottom as a description.</em></p>
                         <p>The American Safety Council's 100% online TABC certification training is approved by the Texas Alcoholic Beverage Commission (Seller Training School #614-692). Upon successful completion of this course, you will be able to immediately download an electronic copy of your seller training certification. The American Safety Council will also report your course completion to the Texas Alcoholic Beverage Commission within 14 calendar days.</p>
-                        <h3>Example Modals Boxes</h3>
+                        <h3>Example Modal Boxes</h3>
                         <p><em>This are just an example of the modal boxes, ultimately this will dynamically be triggered depending on the course status.</em></p>
                         <p>
                             <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#securityModal" data-backdrop="static">Security Questions</button>
@@ -232,7 +236,5 @@
         </div>
     </div>
 </div>
-
-<script>
 
 {% endblock %}

@@ -35,19 +35,50 @@ gulp.task('fonts', function() {
 gulp.task('css', ['site:images'], function() {
     return gulp.src(paths.css.siteSass)
         .pipe(plugin.sourcemaps.init())
-        .pipe(plugin.autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
         .pipe(plugin.sass({
             outputStyle: 'nested', // set to expanded/compressed
             imagePath: 'images/',
             precision: 3,
             errLogToConsole: true
         }))
+        .pipe(plugin.autoprefixer({
+            browsers: ['last 5 versions'],
+            cascade: false
+        }))
         .pipe(plugin.cleancss({compatibility: 'ie9'}))
         .pipe(plugin.sourcemaps.write(''))
         .pipe(gulp.dest(paths.css.siteDest));
+});
+
+// CSS processing using sass
+gulp.task('bootstrap_css', ['css'], function() {
+    return gulp.src(paths.css.bsSass)
+        .pipe(plugin.sourcemaps.init())
+        .pipe(plugin.sass({
+            outputStyle: 'nested', // set to expanded/compressed
+            imagePath: 'images/',
+            precision: 3,
+            errLogToConsole: true
+        }))
+        .pipe(plugin.autoprefixer({
+            browsers: [
+                '>= 1%',
+                'last 1 major version',
+                'not dead',
+                'Chrome >= 45',
+                'Firefox >= 38',
+                'Edge >= 12',
+                'Explorer >= 10',
+                'iOS >= 9',
+                'Safari >= 9',
+                'Android >= 4.4',
+                'Opera >= 30'
+            ],
+            cascade: true
+        }))
+        .pipe(plugin.cleancss({compatibility: 'ie9'}))
+        .pipe(plugin.sourcemaps.write(''))
+        .pipe(gulp.dest(paths.css.bsDest));
 });
 
 gulp.task('set-dl-env', function() {
