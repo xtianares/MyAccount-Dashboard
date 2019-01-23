@@ -55,7 +55,7 @@ gulp.task('do-all', ['html', 'images', 'css', 'bootstrap_css', 'js', 'fonts', 'r
 
 gulp.task('build', function(callback) {
     if (process.env.NODE_ENV == 'Staging' || process.env.NODE_ENV == 'Production') {
-        plugin.runSequence('site:clean', 'do-all', 'generate-service-worker', callback);
+        plugin.runSequence('site:clean', 'do-all', callback);
     } else {
         plugin.runSequence('site:clean', 'do-all', callback);
     }
