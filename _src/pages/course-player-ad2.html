@@ -132,6 +132,11 @@
                     </p>
                 </div>
             </div>
+            <!-- <div class="card rounded-0">
+                <div class="card-body">
+                    <p class="mb-0">The American Safety Council's 100% online TABC certification training is approved by the Texas Alcoholic Beverage Commission (Seller Training School #614-692). Upon successful completion of this course, you will be able to immediately download an electronic copy of your seller training certification. The American Safety Council will also report your course completion to the Texas Alcoholic Beverage Commission within 14 calendar days.</p>
+                </div>
+            </div> -->
             <div class="purchased-upsell card mb-4 rounded-0">
                 <div class="card-body">
                     <h4 class="h6 mb-3">Purchased Upgrades:</h4>
@@ -156,7 +161,7 @@
                 <!-- end alerts -->
                 <div class="row course-status justify-content-between">
                     <div class="col-6 time-elapse text-primary">
-                        <!-- <p class="mb-0"><i class="material-icons">alarm</i>&nbsp;&nbsp;<span class="time-remaning-display">01:30:00</p> -->
+                        <p class="mb-0"><i class="material-icons">alarm</i>&nbsp;&nbsp;<span class="time-remaning-display">01:30:00</p>
                     </div>
                     <!-- <div class="col-6 time-remaining text-primary text-right">
                         <p class="mb-0">Remaining Time: <span class="time-remaning-display">04:30:00</p>
@@ -168,14 +173,56 @@
                 </div>
                 <div class="row course-content">
                     <div class="col-12">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://course.uceusa.com/Courses/Content/1409/SCORM/MSHA/8Hour_Part46/01_IntrotoMSHA/index_lms_html5.html" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <div class="upsell-block">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <img class="upsell-thumb float-left" src="https://via.placeholder.com/160" alt="The Easiest Way to Become a Notary">
+                                    <div class="upsell-description">
+                                        <h3 class="h4 card-title mb-2">Audio Read-Along Upgrade</h3>
+                                        <p class="card-text">Listen to the entire course through headphones or speakers on your computer.</p>
+                                        <a class="btn btn-outline-success btn-sm" href="#">$4.95 - Upgrade Now</a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <img class="upsell-thumb float-left" src="https://via.placeholder.com/160" alt="The Easiest Way to Become a Notary">
+                                    <div class="upsell-description">
+                                        <h3 class="h4 card-title mb-2">Streaming Course Upgrade</h3>
+                                        <p class="card-text">The Streaming Upgrade lets you watch the course through narrated video and animations.</p>
+                                        <a class="btn btn-outline-success btn-sm" href="#">$4.95 - Upgrade Now</a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item total">
+                                    <img class="upsell-thumb float-left" src="https://via.placeholder.com/160" alt="The Easiest Way to Become a Notary">
+                                    <div class="upsell-description">
+                                        <h3 class="h4 card-title mb-2">Rush Processing Upgrade</h3>
+                                        <p class="card-text">Same day processing and certificate shipment before 6:00 PM EST (Business Days).</p>
+                                        <a class="btn btn-outline-success btn-sm" href="#">$4.95 - Upgrade Now</a>
+                                    </div>
+                                </li>
+                            </ul>
+
                         </div>
-                        <p>
-                            <button type="button" class="btn btn-outline-secondary go-fullscreen">Open in Fullscreen</button>
-                        </p>
                     </div>
                 </div>
+                <div class="row course-controls-wrap justify-content-center text-center">
+                    <div class="col-4">
+                        <a href=""><i class="material-icons">skip_previous</i></a>
+                    </div>
+                    <div class="col-4">
+                        <a href=""><i class="material-icons">pause_circle_outline</i></a>
+                    </div>
+                    <div class="col-4">
+                        <a href=""><i class="material-icons">skip_next</i></a>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <br>
+                        <p class="text-danger"><em>Note: HTML-based upsell/ad block example, upsells are going to be enclosed within <code>&lt;div class="upsell-block"&gt;...&lt;/div&gt;</code>. These are formatted the same way as the upsells that shows up on the course dashboard course's upgrade section.</em></p>
+                        <p class="text-danger">Images used in here will need to be served from a central location if possible.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -184,8 +231,42 @@
 
 {% block FooterIncludes %}
 
-<script>
-    $('body').addClass('sidebar-hidden');
-</script>
+<div id="securityModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Security Question</h5>
+            </div>
+            <div class="modal-body">
+                <h5>What was the make and model of your first car?</h5>
+                <select class="custom-select">
+                    <option selected>None of the above</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="couerseBlockedModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Course Blocked</h5>
+            </div>
+            <div class="modal-body">
+                <p>The current course has been blocked due to an invalid response to your security questions. Click the OK button below to return to the Dashboard.<p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" href="/course-list/">OK</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
