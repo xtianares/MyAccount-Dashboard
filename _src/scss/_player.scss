@@ -70,16 +70,23 @@
 .embed-responsive {
     margin-bottom: 20px;
 }
-.questions {
+.exam-status {
+    margin-bottom: 20px;
     padding-bottom: 20px;
+    border-bottom: 1px dotted #ccc;
+}
+.questions {
+    padding-bottom: 15px;
     margin-bottom: 20px;
     border-bottom: 1px dotted #ccc;
+    overflow: hidden;
 
     .choices {
         margin-top: 15px;
         padding-left: 10px;
         padding-right: 10px;
         flex-wrap: wrap;
+        overflow: hidden;
         .btn {
             margin: 10px;
             min-width: 200px;
@@ -125,6 +132,60 @@
 
 }
 
+/* ------ security questions ------ */
+.security-question-block.card {
+    margin: auto;
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow:  0 .125rem .25rem rgba(0,0,0,.075);
+
+    .progress {
+        margin: 0 0 20px 0;
+        height: 10px;
+        border-radius: 10px;
+        .progress-bar {
+            border-radius: 10px;
+        }
+    }
+    .questions:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+    .card-header {
+        background-color: #EEEFF1;
+    }
+    .card-footer {
+        padding: 1rem 1.25rem;
+        background-color: transparent;
+    }
+}
+/* ------ quiz block ------ */
+.quiz-block.card {
+    margin: auto;
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow:  0 .125rem .25rem rgba(0,0,0,.075);
+
+    .questions:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+    .card-header {
+        background-color: #EEEFF1;
+    }
+    .card-footer {
+        padding: 1rem 1.25rem;
+        background-color: transparent;
+    }
+}
 /* ----------------------------------------------------------------------------
     Page Media Queries
 ----------------------------------------------------------------------------- */

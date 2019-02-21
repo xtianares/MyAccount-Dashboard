@@ -1,0 +1,53 @@
+﻿{% set PageTitle = "My Account Checkout" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.html" %}
+
+{% block Content %}
+    <section id="exam-wrap" class="wrap d-flex">
+        <div class="container-fluid but-fixed h-100">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="welcome-blurb h2 mb-3">Final Exam</h1>
+                    <p>The American Safety Council's 100% online TABC certification training is approved by the Texas Alcoholic Beverage Commission (Seller Training School #614-692). Upon successful completion of this course, you will be able to immediately download an electronic copy of your seller training certification. The American Safety Council will also report your course completion to the Texas Alcoholic Beverage Commission within 14 calendar days.</p>
+                </div>
+            </div>
+            <div class="row course-status justify-content-between">
+                <div class="col-6 time-elapse text-primary">
+                    <p>Elapsed Time: <span class="time-elapse-display">01:30:00</p>
+                </div>
+                <div class="col-6 time-remaining text-primary text-right">
+                    <p>Remaining Time: <span class="time-remaning-display">04:30:00</p>
+                </div>
+            </div>
+            <div class="row course-content">
+                <div class="col-12">
+                    <div class="exam-status">
+                        Questions 1 of 10
+                    </div>
+                    <div class="questions">
+                        <h4 class="question">Above all else, safety is the most important element when working at a mine.</h4>
+                        <div class="choices">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="q1-c1" name="q1" class="custom-control-input">
+                                <label class="custom-control-label" for="q1-c1">True</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="q1-c2" name="q1" class="custom-control-input">
+                                <label class="custom-control-label" for="q1-c2">False</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-success submit-exam" href="/exam-result/">Submit</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+{% endblock %}
