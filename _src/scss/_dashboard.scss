@@ -105,6 +105,7 @@ body.sidebar-hidden .dashboard-content {
                 top: 7px;
                 font-size: 1.4em;
                 font-weight: 600;
+                pointer-events: none;
             }
             &[aria-expanded="true"] h5:after {
                 content: "-";
@@ -158,6 +159,7 @@ body.sidebar-hidden .dashboard-content {
                 position: absolute;
                 right: 1rem;
                 top: 14px;
+                pointer-events: none;
             }
             &.resume:after {
                 display: inline-block;
@@ -174,6 +176,7 @@ body.sidebar-hidden .dashboard-content {
                 position: absolute;
                 right: 1rem;
                 top: 12px;
+                pointer-events: none;
             }
         }
     }
