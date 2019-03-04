@@ -174,80 +174,55 @@
                 <div class="row course-content">
                     <div class="col-12">
                         <div class="card quiz-block">
-                            <h5 class="card-header">Quiz</h5>
+                            <h5 class="card-header">Quiz Score</h5>
                             <div class="card-body">
-                                <div class="questions">
-                                    <h4 class="question">Above all else, safety is the most important element when working at a mine.</h4>
-                                    <div class="choices">
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q1-c1" name="q1" class="custom-control-input">
-                                            <label class="custom-control-label" for="q1-c1">True</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q1-c2" name="q1" class="custom-control-input">
-                                            <label class="custom-control-label" for="q1-c2">False</label>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>Result copy goes here, either congratulations you passed or you did not meet the minimum passing score and have failed the quiz.</p>
                                     </div>
                                 </div>
-                                <div class="questions">
-                                    <h4 class="question">As described in Part 50, examples of medical treatment include:</h4>
-                                    <img class="upsell-thumb float-sm-right" src="https://via.placeholder.com/160x180" alt="Course image">
-                                    <div class="choices">
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q2-c1" name="q2" class="custom-control-input">
-                                            <label class="custom-control-label" for="q2-c1">Suturing a wound</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q2-c2" name="q2" class="custom-control-input">
-                                            <label class="custom-control-label" for="q2-c2">Amputation</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q2-c2" name="q2" class="custom-control-input">
-                                            <label class="custom-control-label" for="q2-c3">Treatment of second-degree burns</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q2-c4" name="q2" class="custom-control-input">
-                                            <label class="custom-control-label" for="q2-c4">All of the above are correct</label>
+                                <div class="course-status justify-content-between">
+                                    <p>You answered <span class="text-danger scores">40%</span> correctly. Passing Score is: <span class="scores">70%</span></p>
+                                    <p>Incorrect answers are marked in <strong class="text-danger">red</strong>. Correct answers are marked in <strong class="text-success">green</strong>.</p>
+                                </div>
+                                <div class="quiz-content">
+                                    <div class="questions">
+                                        <h4 class="question">Above all else, safety is the most important element when working at a mine.</h4>
+                                        <div class="choices result">
+                                            <p class="text-success"><strong>True</strong></p>
+                                            <p>False</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="questions">
-                                    <h4 class="question">The surgical removal of dead or damaged skin is an example of first-aid treatment.</h4>
-                                    <div class="choices">
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q3-c1" name="q3" class="custom-control-input">
-                                            <label class="custom-control-label" for="q3-c1">True</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q3-c2" name="q3" class="custom-control-input">
-                                            <label class="custom-control-label" for="q3-c2">False</label>
+                                    <div class="questions">
+                                        <h4 class="question">As described in Part 50, examples of medical treatment include:</h4>
+                                        <div class="choices result">
+                                            <p>Suturing a wound</p>
+                                            <p>Amputation</p>
+                                            <p class="text-danger"><strong>Treatment of second-degree burns</strong></p>
+                                            <p class="text-success"><strong>All of the above are correct</strong></p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="questions">
-                                    <h4 class="question">Stretchers, blankets, and water are examples of sufficient ________.</h4>
-                                    <div class="choices">
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q4-c1" name="q4" class="custom-control-input">
-                                            <label class="custom-control-label" for="q4-c1">PPE</label>
+                                    <div class="questions">
+                                        <h4 class="question">The surgical removal of dead or damaged skin is an example of first-aid treatment.</h4>
+                                        <div class="choices result">
+                                            <p class="text-success"><strong>True</strong></p>
+                                            <p>False</p>
                                         </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q4-c2" name="q4" class="custom-control-input">
-                                            <label class="custom-control-label" for="q4-c2">Neutralizing agents</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q4-c3" name="q4" class="custom-control-input">
-                                            <label class="custom-control-label" for="q4-c3">First-aid materials</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="q4-c4" name="q4" class="custom-control-input">
-                                            <label class="custom-control-label" for="q4-c4">MSDS</label>
+                                    </div>
+                                    <div class="questions">
+                                        <h4 class="question">Stretchers, blankets, and water are examples of sufficient ________.</h4>
+                                        <div class="choices">
+                                            <p class="text-danger"><strong>PPE</strong></p>
+                                            <p>Neutralizing Agent</p>
+                                            <p class="text-success"><strong>First-aid materials</strong></p>
+                                            <p>MSDS</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-footer text-right">
-                                <a class="btn btn-success submit-exam" href="#/">Submit</a>
+                                <a class="btn btn-outline-secondary" href="/course-exam/">Go Back and Review</a> or
+                                <a class="btn btn-success" href="/course-exam/">Continue</a>
                             </div>
                         </div>
 

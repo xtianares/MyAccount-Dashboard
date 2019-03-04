@@ -185,7 +185,25 @@
         padding: 1rem 1.25rem;
         background-color: transparent;
     }
+    .quiz-content {
+        margin-top: 20px;
+    }
 }
+/* ------ course locked out ------ */
+.course-locked.card {
+    margin: auto;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.125);
+    .card-header {
+        padding: .75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0,0,0,.03);
+        border-bottom: 1px solid rgba(0,0,0,.125);
+    }
+}
+
 /* ----------------------------------------------------------------------------
     Page Media Queries
 ----------------------------------------------------------------------------- */

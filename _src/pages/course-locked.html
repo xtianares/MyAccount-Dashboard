@@ -1,0 +1,130 @@
+﻿{% set PageTitle = "My Account Checkout" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "CourseTemplate.html" %}
+
+{% block Content %}
+    <section id="dashboard-wrap" class="wrap d-flex">
+        <div class="dashboard-sidebar">
+            <div class="course-info card rounded-0">
+                <div class="card-body">
+                    <h4 class="h6 my-1">Texas Seller-Server Course</h4>
+                    <div class="order-details">
+                        <span class="order-title">Order ID:</span>
+                        <span class="order-id">30013429</span>
+                    </div>
+                    <div class="status-alert clearfix">
+                        <div class="course-status float-left">
+                            <span class="status-title">Status:</span>
+                            <br>
+                            <span class="status-type">In Progress</span>
+                        </div>
+                        <div class="course-alerts float-right">
+                            <span class="blocking-alert">
+                                <i class="material-icons">notification_important</i>
+                                <span class="alert-count">2</span>
+                            </span>
+                            <span class="non-blocking-alert">
+                                <i class="material-icons">textsms</i>
+                                <span class="alert-count">10</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="progress course-progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <a class="btn btn-success disabled" href="#">Resume Course</a>
+                </div>
+            </div>
+            <div class="card rounded-0">
+                <div class="card-body">
+                    <h4 class="h6 my-2">Technical Support</h4>
+                    <p class="mb-1">
+                        If you experience any technical issues with the course, customer service is available 24 hours a day, 7 days a week.
+                    </p>
+                    <p class="mb-1">
+                        <small>Toll Free:</small> <br> (800) 732-4135<br>
+                    </p>
+                    <p class="mb-1">
+                        <small>Phone:</small> <br> (407) 629-4811<br>
+                    </p>
+                    <p class="mb-1">
+                        <small>E-mail:</small> <br><a href="mailto:info@amersc.com">info@amersc.com</a><br>
+                    </p>
+                    <p class="mb-1">
+                        <small>Note:</small> <br>If you have any questions about the course content, please e-mail the course trainer at the e-mail address. All responses will be provided via e-mail or phone within 24 hours.
+                    </p>
+                </div>
+            </div>
+            <div class="purchased-upsell card mb-4 rounded-0">
+                <div class="card-body">
+                    <h4 class="h6 mb-3">Purchased Upgrades:</h4>
+                    <ul class="check">
+                        <li>PDF Study Guides</li>
+                        <li>Premier Pass</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-content wrap">
+            <div class="container-fluid but-fixed h-100">
+                <div class="row course-content">
+                    <div class="col-12">
+                        <div class="card course-locked text-white bg-danger">
+                            <h3 class="h4 card-header">Course Locked!</h3>
+                            <div class="card-body">
+                                <p>Attention: You have failed to answer the required number of personal validation questions correctly and have been locked out of this course. Please contact the American Safety Council via the live chat link below:</p>
+                                <p class="mb-0"><a class="btn btn-light" href="javascript://Chat" onclick="StartLiveChat()"><i class="material-icons">chat_bubble_outline</i> Live Chat</a></p>
+                                <script type="text/javascript" id="asc_live_chat" src="https://www.americansafetycouncil.com/LiveSupport/livechat.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+
+<div id="securityModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Security Question</h5>
+            </div>
+            <div class="modal-body">
+                <h5>What was the make and model of your first car?</h5>
+                <select class="custom-select">
+                    <option selected>None of the above</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="couerseBlockedModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Course Blocked</h5>
+            </div>
+            <div class="modal-body">
+                <p>The current course has been blocked due to an invalid response to your security questions. Click the OK button below to return to the Dashboard.<p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" href="/course-list/">OK</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

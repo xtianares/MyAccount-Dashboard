@@ -1,0 +1,122 @@
+﻿{% set PageTitle = "My Account Checkout" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.html" %}
+
+{% block Content %}
+    <section id="my-account-wrap" class="wrap">
+        <div class="container-fluid but-fixed container-checkout">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-10">
+                    <h1 class="h2 mb-3">Payment Receipt</h1>
+                    <hr/>
+                    <p><strong class="red">Print This Page!</strong> This is your receipt.</p>
+                    <button class="btn btn-outline-secondary" onclick="window.print()">Print This Page Now</button>
+                    <hr/>
+                    <p><strong class="red">Start Now!</strong> Click the button below to begin your course.</p>
+                    <button class="btn btn-outline-secondary" onclick="window.print()">Continue to Course</button>
+                    <hr/>
+                    <div class="form_section">
+                        <div class="details">
+                            <p><strong class="red">Carefully review!</strong> If any of the information below is incorrect, please contact customer support.</p>
+                            <div id="order-summary-box" class="order-summary-box card mb-4 shadow-sm">
+                                <div class="card-header">
+                                    <h4 class="h5 my-0">
+                                        Order Summary
+                                        <span class="item-amount">$9.95</span>
+                                    </h4>
+                                </div>
+                                <div id="summary-content">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <span class="item-name">Audio Add-on</span>
+                                            <span class="item-amount">$4.95</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="item-name">Example Product With Longer Name Than Others</span>
+                                            <span class="item-amount">$5.00</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <span class="item-name">Discounts</span>
+                                            <span class="item-amount">- $0.00</span>
+                                        </li>
+                                        <li class="list-group-item total">
+                                            <span class="item-name">Total Paid:</span>
+                                            <span class="item-amount">$9.95</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-header">
+                                    <h4 class="h5 my-0 float-left">Contact Information</h4>
+                                </div>
+                                <div class="card-body table-responsive">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <th class="info-title">Name:</th>
+                                                <td>Test Test</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="info-title">Email:</th>
+                                                <td>test@test.com</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-header">
+                                    <h4 class="h5 my-0 float-left">Payment Information</h4>
+                                </div>
+                                <div class="card-body table-responsive">
+                                    <table class="table table-sm table-borderless mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <th class="info-title">Name on Card:</th>
+                                                <td>Test Test</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="info-title">Card Type:</th>
+                                                <td>Visa</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="info-title">Card Number:</th>
+                                                <td>XXXXXXXXXXXX1111</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="info-title">Expiration Date:</th>
+                                                <td>1/2037</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="info-title">Reference Number:</th>
+                                                <td>5511283365626411604010</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <table cellpadding="2" cellspacing="1" class="summary" id="summary_PayPalInfoTable" style="display: none;" width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="table_head" colspan="2"><span id="summary_lblPayPalPaymentInformation"><b>PayPal Payment Information</b></span></td>
+                                    </tr>
+                                    <tr id="summary_TRCardHolderName">
+                                        <td class="cell_label"><span id="summary_lblCardHolderName">Authorization ID:</span></td>
+                                        <td class="cell_label" data-hj-masked="" id="summary_AuthorizationID"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+{% endblock %}

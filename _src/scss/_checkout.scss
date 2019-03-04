@@ -10,6 +10,10 @@
     font-weight: 300;
 }
 .order-summary-box {
+    overflow: hidden;
+    .card-header {
+        cursor: pointer;
+    }
     .list-group-item {
         font-size: 0.95em;
         border-top: 1px dotted rgba(0,0,0,.125);
@@ -41,6 +45,10 @@
 .col-form-label {
     padding-bottom: .25rem;
 }
+.reqd {
+    color: red;
+    font-size: 85%;
+}
 
 /* ----------------------------------------------------------------------------
     Page Media Queries
@@ -66,6 +74,14 @@
 @media (min-width: 992px) {
     .container-checkout {
         padding-top: 20px;
+    }
+    .order-summary-box {
+        .card-header {
+            cursor: default;
+            .item-amount {
+                display: none;
+            }
+        }
     }
 
 }

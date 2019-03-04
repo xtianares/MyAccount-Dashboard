@@ -107,6 +107,10 @@ body {
     }*/
     .status-alert {
         margin-bottom: 10px;
+        .course-status {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
     }
     .status-title {
         opacity: .5;
@@ -172,7 +176,7 @@ body {
     }
 }
 th.info-title {
-    width: 30%;
+    width: 35%;
     max-width: 150px;
 }
 .profile-image {
@@ -288,6 +292,10 @@ a.contact_icon {
     opacity: 0.8 !important;
 }
 
+.btn .material-icons {
+    vertical-align: middle;
+}
+
 /* ----------------------------------------------------------------------------
     Page Media Queries
 ----------------------------------------------------------------------------- */
@@ -317,6 +325,9 @@ a.contact_icon {
         &:before {
             display: inline-block;
         }
+    }
+    th.info-title {
+        width: 30%;
     }
 }
 
