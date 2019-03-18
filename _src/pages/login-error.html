@@ -1,0 +1,24 @@
+﻿{% set PageTitle = "My Account | Set Password" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "BlankTemplate.html" %}
+
+{% block Content %}
+    <section id="login-wrap" class="wrap">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col" style="max-width: 800px;">
+                    <h1 class="login-blurb mb-3 mb-md-3 font-weight-light">University Platform</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col" style="max-width: 800px;">
+                    <p>We apologize for the inconvenience, but something went wrong with your login attempt.  Please click the button below to try again. </p>
+                    <p><a href="/" class="btn btn-success">Login Again</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

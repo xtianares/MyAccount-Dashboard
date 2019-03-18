@@ -1,0 +1,26 @@
+﻿{% set PageTitle = "My Account | Set Password" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "BlankTemplate.html" %}
+
+{% block Content %}
+    <section id="login-wrap" class="wrap">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col" style="max-width: 800px;">
+                    <h1 class="login-blurb mb-3 mb-md-5 font-weight-light">University Platform</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col" style="max-width: 800px;">
+                    <h1 class="mb-3 font-weight-light">You have been logged out.</h1>
+                    <p><strong>Why have I been logged out?</strong> You have been logged out as the result of clicking the logout link or because of an extended period of inactivity or as the result of attempting to reenter the course using a bookmark or 'favorite' link. To log back in, please click the login button below. </p>
+                    <p><a href="/" class="btn btn-success">Login Again</a></p>
+                    <p>If this don't work, please contact customer support for more help at <a href="mailto:support@uceusa.com">support@uceusa.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
