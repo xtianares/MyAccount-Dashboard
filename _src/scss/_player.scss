@@ -99,7 +99,7 @@
     }
 }
 .submit-exam {
-    min-width: 200px;
+    min-width: 100px;
 }
 .scores {
     font-weight: 600;
@@ -211,6 +211,9 @@
 @media (min-width: 576px) {
     .course-controls-wrap {
         padding-top: 15px;
+    }
+    .submit-exam {
+        min-width: 200px;
     }
 
 }

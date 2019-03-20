@@ -24,6 +24,5 @@ module.exports =  {
     critical        : require('critical').stream,
     runSequence     : require('run-sequence'),
     swPrecache      : require('sw-precache'),
-    amerscAPI       : require('amersc-registration-client'),
     eventstream     : require('event-stream')
 }

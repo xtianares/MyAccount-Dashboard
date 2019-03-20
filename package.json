@@ -12,7 +12,6 @@
   "author": "ASC",
   "license": "ISC",
   "devDependencies": {
-    "amersc-registration-client": "1.1.2321-4.3",
     "critical": "^1.2.2",
     "event-stream": "^3.3.4",
     "fs-extra": "^7.0.0",
