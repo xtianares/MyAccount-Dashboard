@@ -1,0 +1,20 @@
+﻿{% set PageTitle = "My Account Login Page" %}
+{% set PageDescription = "Univeristy Platform Dashboard" %}
+{% set CanonicalPage = "" %}
+
+{% extends "BlankTemplate.html" %}
+
+{% block Content %}
+    <section id="login-wrap" class="wrap">
+        <div class="container-fluid">
+            <div class="alerts-wrap row justify-content-center">
+                <div class="col-12"  style="max-width: 900px;">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        You are not authorized to view this page. If you're having issues, please contact customer support at xxx.xxx.xxxx.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
