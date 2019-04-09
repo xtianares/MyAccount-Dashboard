@@ -107,11 +107,23 @@ body.sidebar-hidden .dashboard-content {
                 font-weight: 600;
                 pointer-events: none;
             }
+            &.no-collapse h5:after {
+                display: none;
+            }
             &[aria-expanded="true"] h5:after {
                 content: "-";
             }
             &:hover {
                 background-color: #f9f9f9;
+            }
+            a {
+                display: block;
+                color: inherit;
+                text-decoration: none;
+                transition: padding-left linear .1s, color linear .1s;
+                &:hover {
+                    padding-left: .5rem;
+                }
             }
         }
         .card:last-child {

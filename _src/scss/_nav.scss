@@ -12,13 +12,18 @@
 .navbar-brand {
     margin-right: 0;
 }
-.navbar-brand img {
+.navbar-brand img.asc-logo {
     display: none !important;
     margin-right: 3px;
     border-radius: 3px;
     overflow: hidden;
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    vertical-align: middle;
+}
+.navbar-brand img.university-logo {
+    border-radius: 3px;
+    overflow: hidden;
+    width: 120px;
     vertical-align: middle;
 }
 .nav-item.profile-link {
@@ -90,7 +95,7 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    .navbar-brand img {
+    .navbar-brand img.asc-logo {
         display: inline-block !important;
     }
     .navbar-brand .brand-name {
