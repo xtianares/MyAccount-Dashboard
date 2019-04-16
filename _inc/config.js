@@ -77,6 +77,7 @@ module.exports =  {
                 .pipe(replace('apiURL_geolocation_replaced_during_build', local_apiURL_geolocation))
                 .pipe(replace('loginURL_replaced_during_build', local_loginURL));
         }
+        theStream = theStream.on("data", function() {}); // magic fix for the issue where pages just dont get optimized
     },
     site_url: site_url
 }

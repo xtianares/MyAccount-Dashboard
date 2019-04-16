@@ -2,11 +2,9 @@
 var
     // modules
     gulp            = require('gulp'),
-
     plugin          = require('../_inc/plugin'),
     config          = require('../_inc/config'),
     paths           = require('../_inc/paths')
-
 ;
 
 // copy files that need to be in the root folder
@@ -31,56 +29,6 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest(paths.fonts.dest));
 });
 
-// CSS processing using sass
-gulp.task('css', ['site:images'], function() {
-    return gulp.src(paths.css.siteSass)
-        .pipe(plugin.sourcemaps.init())
-        .pipe(plugin.sass({
-            outputStyle: 'nested', // set to expanded/compressed
-            imagePath: 'images/',
-            precision: 3,
-            errLogToConsole: true
-        }))
-        .pipe(plugin.autoprefixer({
-            browsers: ['last 5 versions'],
-            cascade: false
-        }))
-        .pipe(plugin.cleancss({compatibility: 'ie9'}))
-        .pipe(plugin.sourcemaps.write(''))
-        .pipe(gulp.dest(paths.css.siteDest));
-});
-
-// CSS processing using sass
-gulp.task('bootstrap_css', ['css'], function() {
-    return gulp.src(paths.css.bsSass)
-        .pipe(plugin.sourcemaps.init())
-        .pipe(plugin.sass({
-            outputStyle: 'nested', // set to expanded/compressed
-            imagePath: 'images/',
-            precision: 3,
-            errLogToConsole: true
-        }))
-        .pipe(plugin.autoprefixer({
-            browsers: [
-                '>= 1%',
-                'last 1 major version',
-                'not dead',
-                'Chrome >= 45',
-                'Firefox >= 38',
-                'Edge >= 12',
-                'Explorer >= 10',
-                'iOS >= 9',
-                'Safari >= 9',
-                'Android >= 4.4',
-                'Opera >= 30'
-            ],
-            cascade: true
-        }))
-        .pipe(plugin.cleancss({compatibility: 'ie9'}))
-        .pipe(plugin.sourcemaps.write(''))
-        .pipe(gulp.dest(paths.css.bsDest));
-});
-
 gulp.task('set-dl-env', function() {
     return process.env.NODE_ENV = 'Development';
 });
@@ -89,4 +37,34 @@ gulp.task('set-ml-env', function() {
 });
 gulp.task('set-prod-env', function() {
     return process.env.NODE_ENV = 'Production';
+});
+
+// clean the _build folder
+gulp.task('site:clean', function() {
+    var clean = plugin.fs.emptyDirSync(paths.site.dest, err => {
+        if (err) return console.error(err);
+        console.log('build folder cleaned!');
+    });
+    return clean;
+});
+
+// watch for changes
+gulp.task('watch', function() {
+    gulp.watch(paths.html.sitePages, ['html']);
+    gulp.watch(paths.html.templatesFiles, ['html']);
+    gulp.watch(paths.images.siteFiles, ['images']);
+    gulp.watch(paths.js.siteFiles, ['js']);
+    gulp.watch(paths.css.siteFiles, ['css']);
+    gulp.watch(paths.root.files, ['rootfiles']);
+});
+
+// local webserver
+gulp.task('webserver', ['watch', 'site:critical'], function () {
+    return gulp.src(paths.site.dest)
+        .pipe(plugin.webserver({
+            //https: true,
+            port: 8001,
+            livereload: true,
+            open: true
+        }));
 });
