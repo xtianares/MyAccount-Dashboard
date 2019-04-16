@@ -55,6 +55,19 @@
         .btn + .btn{
             margin-top: 1em;
         }
+        .blocking-alert, .non-blocking-alert {
+            cursor: default;
+        }
+        .blocking-alert {
+            &:hover {
+                color: #b8b8b8;
+            }
+        }
+        .non-blocking-alert {
+            &:hover {
+                color: #b8b8b8;
+            }
+        }
     }
 }
 .dashboard-sidebar.show {

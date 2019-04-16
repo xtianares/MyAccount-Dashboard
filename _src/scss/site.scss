@@ -124,6 +124,45 @@ body {
     }
     .course-alerts {
         margin-right: 5px;
+
+        .dropdown-menu {
+            padding: 0;
+            min-width: 300px;
+            max-width: 300px;
+            font-size: .9rem;
+            border: 1px solid rgba(0,0,0,.05);
+            box-shadow: 0 .25rem .75rem rgba(0,0,0,.075);
+        }
+        .dropdown-item, .dropdown-header {
+            padding: .5rem .75rem .6rem .75rem;
+            white-space: normal;
+        }
+        .dropdown-item {
+            padding-right: 1.75rem;
+            border-top: 1px solid rgba(0,0,0,.05);
+            position: relative;
+            &:after {
+                display: block;
+                width: 15px;
+                height: 15px;
+                line-height: 15px;
+                margin-top: -7px;
+                font-size: 1.3em;
+                font-family: 'Material Icons';
+                content: "\e315";
+                border: 0;
+                right: 10px;
+                top: 50%;
+                position: absolute;
+            }
+        }
+        .dropdown-header {
+            font-size: 1em;
+            font-weight: 600;
+            color: #fff;
+            background-color: #6D7785;
+            border-radius: .2rem .2rem 0 0;
+        }
     }
     .blocking-alert, .non-blocking-alert {
         display: inline-block;
@@ -131,6 +170,7 @@ body {
         margin-top: 15px;
         color: #b8b8b8;
         position: relative;
+        cursor: pointer;
 
         .material-icons {
             display: inline-block;
@@ -147,19 +187,26 @@ body {
         }
     }
     .blocking-alert {
-
+        &:hover {
+            color: inherit;
+        }
         .alert-count {
             background-color: #da4453;
         }
     }
     .non-blocking-alert {
-
+        &:hover {
+            color: inherit;
+        }
         .material-icons {
             font-size: 1.3em;
         }
         .alert-count {
             background-color: #f6bb42;
         }
+    }
+    .show .blocking-alert, .show .non-blocking-alert {
+        color: inherit;
     }
     .course-progress {
         height: 5px;
