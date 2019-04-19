@@ -1,5 +1,5 @@
 // Gulp.js configuration
-var
+const
     // modules
     gulp            = require('gulp'),
     plugin          = require('../_inc/plugin'),
@@ -9,7 +9,7 @@ var
 
 // copy files that need to be in the root folder
 gulp.task('rootfiles', function() {
-    var rootfiles = gulp.src(paths.root.files)
+    let rootfiles = gulp.src(paths.root.files)
 
     if (process.env.NODE_ENV == 'Staging' || process.env.NODE_ENV == 'Production') {
         rootfiles = rootfiles
@@ -41,7 +41,7 @@ gulp.task('set-prod-env', function() {
 
 // clean the _build folder
 gulp.task('site:clean', function() {
-    var clean = plugin.fs.emptyDirSync(paths.site.dest, err => {
+    let clean = plugin.fs.emptyDirSync(paths.site.dest, err => {
         if (err) return console.error(err);
         console.log('build folder cleaned!');
     });
@@ -53,8 +53,12 @@ gulp.task('watch', function() {
     gulp.watch(paths.html.sitePages, ['html']);
     gulp.watch(paths.html.templatesFiles, ['html']);
     gulp.watch(paths.images.siteFiles, ['images']);
-    gulp.watch(paths.js.siteFiles, ['js']);
-    gulp.watch(paths.css.siteFiles, ['css']);
+    paths.themes.forEach(theme => {
+        gulp.watch(paths.images.themeFiles(theme), ['images']);
+        gulp.watch(paths.js.siteFiles, ['js']);
+        gulp.watch(paths.css.siteFiles, ['css']);
+        gulp.watch(paths.css.siteSass(theme), ['css']);
+    });
     gulp.watch(paths.root.files, ['rootfiles']);
 });
 

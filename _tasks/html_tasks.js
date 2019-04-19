@@ -1,5 +1,5 @@
 // Gulp.js configuration
-var
+const
     // modules
     gulp            = require('gulp'),
     plugin          = require('../_inc/plugin'),
@@ -9,7 +9,7 @@ var
 
 // site page/html processing
 gulp.task('site:nunjucks', function() {
-    var page = gulp.src(paths.html.sitePages)
+    let page = gulp.src(paths.html.sitePages)
         //.pipe(plugin.newer(paths.site.dest))
         .pipe(plugin.nunjucksRender({
             ext: '/index.html',
@@ -34,7 +34,7 @@ gulp.task('site:nunjucks', function() {
 
 // complete html build and moving index file outside of the "index" folder
 gulp.task('html', ['site:nunjucks'], function() {
-    var move = plugin.fs.move (
+    let move = plugin.fs.move (
         paths.site.dest + 'index/index.html', // file to move
         paths.site.dest + 'index.html',       // where to move
         { clobber: true },

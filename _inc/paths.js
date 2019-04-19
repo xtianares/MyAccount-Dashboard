@@ -1,60 +1,49 @@
+// template location setup, this is also in the config.js
+// process.env.THE_THEME = 'asc'; // set this node variable during build, uncomment for testing
+// SET THE_THEME=asc for testing locally
+const themeFolder = process.env.THE_THEME || 'asc';
+console.log('Theme Used: ' + themeFolder);
+
 // folders paths
 module.exports = {
+    themes: [
+        'asc',
+        'aaa'
+    ],
     site: {
         src: '_src/',
         dest: '_build/'
     },
-    reg: {
-        src: '_src/registration/',
-        dest: '_build/registration/'
-    },
     html: {
         sitePages: '_src/pages/**/*.+(html|njk)',
         siteFolder: '_src/pages/',
-        regPages: '_src/registration/pages/**/*.+(html|njk)',
-        regFolder: '_src/registration/pages/',
         templatesFiles: '_src/templates/**/*',
         templatesFolder: '_src/templates/'
     },
     images: {
         siteFiles: '_src/images/**/*',
-        regFiles: '_src/registration/images/**/*',
         siteFolder: '_src/images/',
-        regFolder: '_src/registration/images/',
-        siteDest: '_build/custom_content/images/',
-        regDest: '_build/images/registration/'
+        siteDest: '_build/images/',
+        themeFiles: theme => '_src/themes/' + theme + '/images/**/*',
+        themeFolder: theme => '_src/themes/' + theme + '/images/',
+        themeDest: theme => '_build/themes/' + theme + '/custom_content/images/'
     },
     css: {
         siteFiles: '_src/scss/**/*',
         siteFolder: '_src/scss/',
-        siteSass: '_src/scss/site.scss',
-        siteDest: '_build/custom_content/css/',
+        // siteSass: '_src/scss/site.scss',
+        siteSass: theme => '_src/themes/' + theme + '/scss/site.scss',
+        siteDest: theme => '_build/themes/' + theme + '/custom_content/css/',
         bsFiles: '_src/bootstrap/scss/**/*',
         bsFolder: '_src/bootstrap/scss/',
-        bsSass: '_src/bootstrap/scss/bootstrap.scss',
-        bsDest: '_build/custom_content/css/bootstrap'
+        bsSass: '_src/scss/bootstrap/scss/bootstrap.scss',
+        bsDest: theme => '_build/themes/' + theme + '/custom_content/css/bootstrap'
     },
     js: {
         siteFiles: '_src/js/**/*',
         siteRootFiles: '_src/js/*',
         siteFolder: '_src/js/',
-        regFiles: '_src/registration/js/**/*',
-        regRootFiles: '_src/registration/js/*',
-        regFolder: '_src/registration/js/',
-        siteDest: '_build/custom_content/js/',
-        regDest: '_build/js/registration/'
-    },
-    lang: {
-        files: '_src/registration/lang/**/*',
-        folder: '_src/registration/lang/',
-        en: '_src/registration/lang/en/index.json',
-        es: '_src/registration/lang/es/index.json',
-        dest: '_build/registration/lang/'
-    },
-    ajax: {
-        files: '_src/registration/ajax/**/*',
-        folder: '_src/registration/ajax/',
-        dest: '_build/registration/ajax/'
+        siteDest: theme => '_build/themes/' + theme + '/custom_content/js/',
     },
     fonts: {
         files: '_src/font/**/*',

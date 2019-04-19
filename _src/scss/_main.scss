@@ -349,6 +349,64 @@ a.contact_icon {
     cursor: pointer;
 }
 
+/* ACCORDION, used in FAQs */
+p + .accord {
+    margin-top: 20px;
+}
+.accord {
+    padding: 10px 10px 5px 10px;
+    border-bottom: 1px dotted #ccc;
+
+    &:first-child {
+        border-top: 1px dotted #ccc;
+    }
+    h3 {
+        margin-left: 0;
+        padding-right: 80px;
+        position: relative;
+        cursor: pointer;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+    h3:hover, h3:active, h3:focus {
+        color: #4285f4;
+    }
+    h3:before {
+        color: #4285f4;;
+        content: "+";
+        display: none;
+        font-size: 18px;
+        font-weight: bold !important;
+        height: inherit;
+        margin-left: -20px;
+        vertical-align: middle;
+        width: 20px;
+        margin-top: -3px;
+    }
+    h3.active:before {
+        content: "-";
+    }
+    h3:after {
+        color: #4285f4;
+        content: "+ More Info";
+        display: block;
+        font-size: 14px;
+        font-weight: normal!important;
+        font-family: 'Open Sans','Trebuchet MS',Verdana,Arial,Helvetica;
+        height: inherit;
+        vertical-align: middle;
+        position: absolute;
+        top: 6px;
+        right: 0;
+    }
+    h3.active:after {
+        content: "- Less Info";
+    }
+    .accord_content {
+        margin-top: 10px;
+        display: none;
+    }
+}
 /* ----------------------------------------------------------------------------
     Page Media Queries
 ----------------------------------------------------------------------------- */

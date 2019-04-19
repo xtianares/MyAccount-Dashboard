@@ -1,5 +1,5 @@
 // Gulp.js configuration
-var
+const
     // modules
     gulp            = require('gulp'),
     plugin          = require('../_inc/plugin'),
@@ -9,29 +9,33 @@ var
 
 // site js processing
 gulp.task('site:js', function() {
-    var jsbuild = gulp.src(paths.js.siteRootFiles)
-        .pipe(plugin.sourcemaps.init())
-        .pipe(plugin.deporder())
-        .pipe(plugin.concat('site.js'));
+    paths.themes.forEach(theme => {
+        let jsbuild = gulp.src(paths.js.siteRootFiles)
+            .pipe(plugin.sourcemaps.init())
+            .pipe(plugin.deporder())
+            .pipe(plugin.concat('site.js'));
 
-        config.set(jsbuild); // run replacement settings from config file
+            config.set(jsbuild); // run replacement settings from config file
 
-    // minify production code
-    if (process.env.NODE_ENV == 'Staging' || process.env.NODE_ENV == 'Production') {
-        jsbuild = jsbuild
-            //.pipe(plugin.stripdebug())
-            .pipe(plugin.uglify());
-    }
-    jsbuild = jsbuild.pipe(plugin.sourcemaps.write(''));
+        // minify production code
+        if (process.env.NODE_ENV == 'Staging' || process.env.NODE_ENV == 'Production') {
+            jsbuild = jsbuild
+                //.pipe(plugin.stripdebug())
+                .pipe(plugin.uglify());
+        }
+        jsbuild = jsbuild.pipe(plugin.sourcemaps.write(''));
 
-    return jsbuild.pipe(gulp.dest(paths.js.siteDest));
+        return jsbuild.pipe(gulp.dest(paths.js.siteDest(theme)));
+    });
 });
 
 // copying js files to build forder
 gulp.task('site:js-copy', function() {
-    return gulp.src([paths.js.siteFiles, '!' + paths.js.regFolder + 'amersc-registration.js'])
-        .pipe(plugin.newer(paths.js.siteDest))
-        .pipe(gulp.dest(paths.js.siteDest));
+    paths.themes.forEach(theme => {
+        return gulp.src([paths.js.siteFiles, '!' + paths.js.regFolder + 'amersc-registration.js'])
+            .pipe(plugin.newer(paths.js.siteDest(theme)))
+            .pipe(gulp.dest(paths.js.siteDest(theme)));
+        });
 });
 
 // js processing

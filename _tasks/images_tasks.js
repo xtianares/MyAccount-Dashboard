@@ -22,4 +22,22 @@ gulp.task('site:imagewebp', function() {
         .pipe(gulp.dest(paths.images.siteDest));
 });
 
-gulp.task('images', ['site:imagemin', 'site:imagewebp']);
+gulp.task('theme:imagemin', function() {
+    paths.themes.forEach(theme => {
+        return gulp.src(paths.images.themeFiles(theme))
+            .pipe(plugin.newer(paths.images.themeDest(theme)))
+            .pipe(plugin.imagemin({ optimizationLevel: 5 }))
+            .pipe(gulp.dest(paths.images.themeDest(theme)));
+    });
+});
+
+gulp.task('theme:imagewebp', function() {
+    paths.themes.forEach(theme => {
+        return gulp.src(paths.images.themeFiles(theme))
+            .pipe(plugin.newer(paths.images.themeDest(theme)))
+            .pipe(plugin.webp({ lossless: true, quality: 65 }))
+            .pipe(gulp.dest(paths.images.themeDest(theme)));
+    });
+});
+
+gulp.task('images', ['site:imagemin', 'site:imagewebp', 'theme:imagemin', 'theme:imagewebp']);
