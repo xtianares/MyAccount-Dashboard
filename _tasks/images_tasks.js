@@ -1,5 +1,5 @@
 // Gulp.js configuration
-var
+const
     // modules
     gulp            = require('gulp'),
     plugin          = require('../_inc/plugin'),
