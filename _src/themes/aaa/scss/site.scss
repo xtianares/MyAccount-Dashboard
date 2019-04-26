@@ -12,7 +12,13 @@ html {
     overflow-y: scroll;
 }
 
+.navbar.bg-dark {
+    background-color: #00529B !important;
+}
 
+.navbar-brand img.asc-logo {
+    width: 46px;
+}
 /* ----------------------------------------------------------------------------
     Page Media Queries
 ----------------------------------------------------------------------------- */

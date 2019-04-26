@@ -13,7 +13,7 @@ gulp.task('site:js', function() {
         let jsbuild = gulp.src(paths.js.siteRootFiles)
             .pipe(plugin.sourcemaps.init())
             .pipe(plugin.deporder())
-            .pipe(plugin.concat('site.js'));
+            .pipe(plugin.concat('site.min.js'));
 
             config.set(jsbuild); // run replacement settings from config file
 
